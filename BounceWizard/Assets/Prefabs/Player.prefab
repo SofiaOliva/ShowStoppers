@@ -55,6 +55,7 @@ MonoBehaviour:
   fireball: {fileID: 2657455875157849732, guid: 3d498f37a1e201f49809c94faf529964,
     type: 3}
   fireBallStartDistance: 1.25
+  beacon: {fileID: 3414369122091358203, guid: de4d4ed39232b2f4f8a29a471fd51398, type: 3}
 --- !u!114 &6836028800345051221
 MonoBehaviour:
   m_ObjectHideFlags: 0

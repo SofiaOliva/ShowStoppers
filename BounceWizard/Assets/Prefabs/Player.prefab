@@ -49,7 +49,7 @@ MonoBehaviour:
     mana: 0
     manaTime: 1
     overcharge: 0
-    overchargeTime: 1
+    overchargeTime: 5
 --- !u!1 &6836028800345051223
 GameObject:
   m_ObjectHideFlags: 0

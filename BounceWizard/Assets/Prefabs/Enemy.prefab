@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 6235339681064458050}
   - component: {fileID: 6235339681064458049}
   - component: {fileID: 6235339681064458052}
+  - component: {fileID: 5819101404471019679}
   - component: {fileID: 6235339681064458048}
   m_Layer: 0
   m_Name: Enemy
@@ -262,6 +263,46 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5819101404471019679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235339681064458079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880cac32d2e6b974e8b8bc8410123b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceT: {fileID: 6235339680470187876}
+  bounceTime: 0.2
+  bounceCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.044581454
+      outSlope: -0.044581454
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.06279808
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  bumpEffect: {fileID: 4044529215556197517, guid: 643d8ddfd502a5147b06d54a42db1798,
+    type: 3}
 --- !u!54 &6235339681064458048
 Rigidbody:
   m_ObjectHideFlags: 0

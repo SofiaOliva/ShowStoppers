@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [ExecuteAlways]
 public class Spawner : MonoBehaviour
@@ -66,7 +67,10 @@ public class Spawner : MonoBehaviour
                 }
                 if (!CollisionsAt(spawnedPosition))
                 {
-                    Instantiate(enemyPref, spawnedPosition, Quaternion.identity, enemyRoot);
+                    GameObject newEnemy = (GameObject)PrefabUtility.InstantiatePrefab(enemyPref);
+                    newEnemy.transform.position = spawnedPosition;
+                    newEnemy.transform.rotation = Quaternion.identity;
+                    newEnemy.transform.SetParent(enemyRoot);
                     break;
                 }
             }            

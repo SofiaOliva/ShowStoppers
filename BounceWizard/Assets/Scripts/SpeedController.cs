@@ -18,6 +18,10 @@ public class SpeedController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if(rb.velocity.sqrMagnitude == 0f)
+        {
+            rb.velocity = Quaternion.Euler(0f,Random.Range(0f,1f)*180f,0f) * Vector3.forward;
+        }
         rb.velocity = rb.velocity.normalized * speed;
     }
 

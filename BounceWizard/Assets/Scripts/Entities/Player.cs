@@ -8,6 +8,8 @@ public class Player : Entity
     public float fireBallStartDistance = 1.25f;
     public GameObject beacon;
 
+    public ManaPool manaPool;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,8 @@ public class Player : Entity
 
     void LaunchFireball()
     {
+        if (!manaPool.TryCast(0)) return;
+
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPosition = new Vector3(worldPosition.x, 0, worldPosition.z);
         Vector3 aimDirection = (worldPosition - transform.position).normalized;

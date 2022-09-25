@@ -52,6 +52,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   health: 0
+  fireball: {fileID: 2657455875157849732, guid: 3d498f37a1e201f49809c94faf529964,
+    type: 3}
+  fireBallStartDistance: 1.25
 --- !u!114 &6836028800345051221
 MonoBehaviour:
   m_ObjectHideFlags: 0

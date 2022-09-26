@@ -47,6 +47,7 @@ MonoBehaviour:
   enemyRoot: {fileID: 0}
   lightningEffect: {fileID: 4684276327340518807, guid: 8071ef7572b082c45a9c4c09fdc5a2d4,
     type: 3}
+  shake: {fileID: 11400000, guid: 406b4e91e2553ad4b9b23762612dea72, type: 2}
 --- !u!1 &4877902177912859817
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    //Sofia: have this class inherit from the Entity class.
-    //Try using abstraction to override those methods to trigger effects, like sounds or particles when taking damage
+    public ShakeSO hurtScreenShake;
+
+    public override void TakeDamage(int damage)
+    {
+        base.TakeDamage(damage);
+        hurtScreenShake?.DoShake();
+    }
 }

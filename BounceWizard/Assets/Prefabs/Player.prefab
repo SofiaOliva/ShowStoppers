@@ -535,6 +535,7 @@ MonoBehaviour:
   fireBallStartDistance: 1.25
   beacon: {fileID: 3414369122091358203, guid: de4d4ed39232b2f4f8a29a471fd51398, type: 3}
   manaPool: {fileID: 8160137753944833089}
+  hurtScreenShake: {fileID: 11400000, guid: 3bfd6b8a013de214fa3b209a884de1a3, type: 2}
 --- !u!114 &6836028800345051221
 MonoBehaviour:
   m_ObjectHideFlags: 0

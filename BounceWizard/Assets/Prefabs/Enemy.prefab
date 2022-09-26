@@ -456,6 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   health: 0
+  hurtScreenShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
 --- !u!114 &6235339681064458052
 MonoBehaviour:
   m_ObjectHideFlags: 0

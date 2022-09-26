@@ -15,7 +15,7 @@ public class Entity : MonoBehaviour
         SetHealth(maxHealth);
     }
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         if (health <= 0) return;
         ChangeHealth(-damage);

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ManaStream_Spring
   m_EditorClassIdentifier: 
   maxMana: 2
-  mana: 0
+  mana: 1.4399986
   manaTime: 2
-  overcharge: 1
+  overcharge: 0
   overchargeTime: 1

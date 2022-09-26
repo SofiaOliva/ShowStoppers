@@ -49,7 +49,7 @@ MonoBehaviour:
     mana: 0
     manaTime: 1
     overcharge: 0
-    overchargeTime: 5
+    overchargeTime: 3
 --- !u!1 &6836028800345051223
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,22 +428,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.00000034272668
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
         type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
+        type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
         type: 3}
@@ -453,7 +453,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a49b1d777d182bd499a7c0728a6343b5,
         type: 3}

@@ -36,6 +36,6 @@ public class Lightning : MonoBehaviour
         Entity struckEntity = enemyRoot.GetChild(Random.Range(0, enemyCount)).gameObject.GetComponent<Entity>();
         GameObject spawnedBolt = Instantiate(lightningEffect, struckEntity.transform.position, Quaternion.identity);
         Destroy(spawnedBolt, 0.25f);
-        struckEntity.Die();
+        struckEntity.TakeDamage(2);
     }
 }

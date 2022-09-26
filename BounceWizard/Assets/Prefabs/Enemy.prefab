@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4769532535885670642}
   - component: {fileID: 5798271594084208627}
   m_Layer: 0
-  m_Name: BounceCollider (1)
+  m_Name: HitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6235339681064458051}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5798271594084208627
 BoxCollider:
@@ -210,7 +210,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6235339681064458051}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &225804405455389690
 MonoBehaviour:
@@ -384,7 +384,7 @@ Transform:
   m_Children:
   - {fileID: 6235339680020773802}
   m_Father: {fileID: 6235339681064458051}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6235339681064458079
 GameObject:
@@ -420,10 +420,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6235339680417029800}
+  - {fileID: 4769532535885670642}
   - {fileID: 6235339680470187876}
   - {fileID: 9096633070795809040}
   - {fileID: 4542472213150990311}
-  - {fileID: 4769532535885670642}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -584,7 +584,7 @@ RectTransform:
   m_Children:
   - {fileID: 6779284143329642201}
   m_Father: {fileID: 6235339681064458051}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

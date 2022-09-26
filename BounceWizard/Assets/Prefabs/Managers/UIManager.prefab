@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed08a5e0bee24a14cb1cfed4f3249141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaPool: {fileID: 0}
   manaTexts:
   - {fileID: 4344037880198827684}
 --- !u!1 &4344037880161036363
@@ -238,7 +237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4344037880439941499
 RectTransform:
   m_ObjectHideFlags: 0

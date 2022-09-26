@@ -3,29 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[ExecuteAlways]
 public class ManaUI : MonoBehaviour
 {
-    ManaPool manaPool;
+    public ManaStreamSO manaStream;
 
     public TMP_Text[] manaTexts;
 
-    public void Awake()
-    {
-        manaPool = FindObjectOfType<ManaPool>();
-    }
-
     private void OnEnable()
     {
-        manaPool.manaStreams[0].ManaChange += OnFireManaChange;
+        manaStream.ManaChange += OnManaChange;
     }
 
     private void OnDisable()
     {
-        manaPool.manaStreams[0].ManaChange -= OnFireManaChange;
+        manaStream.ManaChange -= OnManaChange;
     }
 
-    private void OnFireManaChange(float newMana)
+    private void OnManaChange(float newMana)
     {
-        manaTexts[0].text = System.Math.Floor(newMana)+"/"+ manaPool.manaStreams[0].maxMana;
+        manaTexts[0].text = ""+System.Math.Floor(newMana);
     }
 }

@@ -10,11 +10,6 @@ public class Player : Entity
 
     public ManaPool manaPool;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -42,6 +37,8 @@ public class Player : Entity
 
     void CreateBeacon()
     {
+        if (!manaPool.TryCast(1)) return;
+
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPosition = new Vector3(worldPosition.x, 0, worldPosition.z);
         GameObject newBeacon = Instantiate(beacon, worldPosition, Quaternion.identity);

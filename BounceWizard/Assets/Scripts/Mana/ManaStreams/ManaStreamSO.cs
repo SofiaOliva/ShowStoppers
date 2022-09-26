@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[System.Serializable]
-public class ManaStream
+[CreateAssetMenu(fileName = "ManaStream", menuName = "SO/ManaStreamSO")]
+public class ManaStreamSO : ScriptableObject
 {
     public int maxMana = 3;
     public float mana = 0f;
@@ -45,6 +45,18 @@ public class ManaStream
             overcharge = value;
             OverchargeChange?.Invoke();
         }
+    }
+
+    public void Start()
+    {
+        Mana = 0f;
+        Overcharge = 0f;
+    }
+
+    private void OnValidate()
+    {
+        ManaChange?.Invoke(Mana);
+        OverchargeChange?.Invoke();
     }
 
     public void Fill(float time)

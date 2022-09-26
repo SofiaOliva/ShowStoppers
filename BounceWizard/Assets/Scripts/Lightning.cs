@@ -16,7 +16,7 @@ public class Lightning : MonoBehaviour
 
     private void OnEnable()
     {
-        foreach(ManaStream stream in manaPool.manaStreams)
+        foreach(ManaStreamSO stream in manaPool.manaStreams)
         {
             stream.Explode += Strike;
         }
@@ -24,7 +24,7 @@ public class Lightning : MonoBehaviour
 
     private void OnDisable()
     {
-        foreach (ManaStream stream in manaPool.manaStreams)
+        foreach (ManaStreamSO stream in manaPool.manaStreams)
         {
             stream.Explode -= Strike;
         }
@@ -33,6 +33,7 @@ public class Lightning : MonoBehaviour
     private void Strike()
     {
         int enemyCount = enemyRoot.childCount;
+        if (enemyCount == 0) return;
         Entity struckEntity = enemyRoot.GetChild(Random.Range(0, enemyCount)).gameObject.GetComponent<Entity>();
         GameObject spawnedBolt = Instantiate(lightningEffect, struckEntity.transform.position, Quaternion.identity);
         Destroy(spawnedBolt, 0.25f);

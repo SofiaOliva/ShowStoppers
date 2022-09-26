@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class ManaPool : MonoBehaviour
 {
-    public ManaStream[] manaStreams;
+    public ManaStreamSO[] manaStreams;
+
+    private void Start()
+    {
+        foreach (ManaStreamSO stream in manaStreams)
+        {
+            stream.Start();
+        }
+    }
 
     private void FixedUpdate()
     {
-        foreach(ManaStream stream in manaStreams)
+        foreach(ManaStreamSO stream in manaStreams)
         {
             stream.Fill(Time.fixedDeltaTime);
         }

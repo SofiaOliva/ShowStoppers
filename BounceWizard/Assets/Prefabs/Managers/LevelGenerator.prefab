@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667d4e1688e1c004fb30b457f07a3827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allyCount: 0
   bounds: {x: 16, y: 8}
   enemyPref: {fileID: 6235339681064458079, guid: 78a7eac10f52dd942aa22da3a320040d,
     type: 3}
@@ -56,7 +55,7 @@ MonoBehaviour:
   characterRadius: 0.5
   solidMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 193
 --- !u!1 &7200946112125333041
 GameObject:
   m_ObjectHideFlags: 0

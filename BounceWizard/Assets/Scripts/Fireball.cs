@@ -34,8 +34,11 @@ public class Fireball : MonoBehaviour
             return;
         }
 
-        print("Fireball hit " + entity.gameObject.name + " with health " + entity.health);
+        HitEntity(entity);
+    }
 
+    public void HitEntity(Entity entity)
+    {
         entity.TakeDamage(damage);
         active = false;
         Destroy(gameObject);

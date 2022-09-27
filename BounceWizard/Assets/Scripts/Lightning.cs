@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lightning : MonoBehaviour
 {
     public Transform enemyRoot;
+    public Transform allyRoot;
 
     public GameObject lightningEffect;
     ManaPool manaPool;
@@ -34,9 +35,9 @@ public class Lightning : MonoBehaviour
 
     private void Strike()
     {
-        int enemyCount = enemyRoot.childCount;
-        if (enemyCount == 0) return;
-        Entity struckEntity = enemyRoot.GetChild(Random.Range(0, enemyCount)).gameObject.GetComponent<Entity>();
+        int allyCount = allyRoot.childCount;
+        if (allyCount == 0) return;
+        Entity struckEntity = allyRoot.GetChild(Random.Range(0, allyCount)).gameObject.GetComponent<Entity>();
         GameObject spawnedBolt = Instantiate(lightningEffect, struckEntity.transform.position, Quaternion.identity);
         Destroy(spawnedBolt, 0.25f);
         shake.DoShake();

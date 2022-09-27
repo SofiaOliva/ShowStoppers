@@ -6,10 +6,9 @@ using UnityEditor;
 [ExecuteAlways]
 public class Spawner : MonoBehaviour
 {
-    public int allyCount = 0;
     [SerializeField] Vector2 bounds;
     [SerializeField]
-    GameObject enemyPref;
+    GameObject enemyPref, allyPref;
 
     [SerializeField]
     Transform player;
@@ -23,22 +22,28 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     LayerMask solidMask;
 
-    public void Generate(int enemyCount)
+    public void Generate(LevelSO level)
     {
         LevelGenerator.DestroyChildren(enemyRoot);
+        LevelGenerator.DestroyChildren(allyRoot);
         player.transform.position = Vector3.up * 5f;
         Physics.SyncTransforms();
         Vector3 playerPosition;
         TryFindPosition(out playerPosition);
         player.transform.position = playerPosition;
 
-        for (int i = 0; i < enemyCount; ++i)
+        for (int i = 0; i < level.allyCount; ++i)
         {
-            TrySpawn(enemyPref);          
+            TrySpawn(allyPref, allyRoot);
+        }
+
+        for (int i = 0; i < level.enemyCount; ++i)
+        {
+            TrySpawn(enemyPref, enemyRoot);          
         }
     }
 
-    void TrySpawn(GameObject prefab)
+    void TrySpawn(GameObject prefab, Transform parent)
     {
         Vector3 spawnedPosition;
 
@@ -47,7 +52,7 @@ public class Spawner : MonoBehaviour
             GameObject newPref = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
             newPref.transform.position = spawnedPosition;
             newPref.transform.rotation = Quaternion.identity;
-            newPref.transform.SetParent(enemyRoot);
+            newPref.transform.SetParent(parent);
         }
         else
         {

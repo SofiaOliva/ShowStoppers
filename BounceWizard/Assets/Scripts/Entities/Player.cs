@@ -10,9 +10,6 @@ public class Player : Entity
 
     public ManaPool manaPool;
 
-    public ShakeSO hurtScreenShake;
-
-
     // Update is called once per frame
     void Update()
     {
@@ -44,11 +41,5 @@ public class Player : Entity
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPosition = new Vector3(worldPosition.x, 0, worldPosition.z);
         GameObject newBeacon = Instantiate(beacon, worldPosition, Quaternion.identity);
-    }
-
-    public override void TakeDamage(int damage)
-    {
-        base.TakeDamage(damage);
-        hurtScreenShake?.DoShake();
     }
 }

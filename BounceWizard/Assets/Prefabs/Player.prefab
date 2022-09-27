@@ -488,8 +488,8 @@ GameObject:
   - component: {fileID: 6836028800345051563}
   - component: {fileID: 6836028800345051221}
   - component: {fileID: 6836028800345051560}
-  - component: {fileID: 6836028800345051562}
   - component: {fileID: 404596225707521282}
+  - component: {fileID: 6836028800345051562}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -530,12 +530,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   health: 0
+  hurtScreenShake: {fileID: 11400000, guid: 3bfd6b8a013de214fa3b209a884de1a3, type: 2}
   fireball: {fileID: 2657455875157849732, guid: 3d498f37a1e201f49809c94faf529964,
     type: 3}
   fireBallStartDistance: 1.25
   beacon: {fileID: 3414369122091358203, guid: de4d4ed39232b2f4f8a29a471fd51398, type: 3}
   manaPool: {fileID: 8160137753944833089}
-  hurtScreenShake: {fileID: 11400000, guid: 3bfd6b8a013de214fa3b209a884de1a3, type: 2}
 --- !u!114 &6836028800345051221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,22 +589,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!54 &6836028800345051562
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6836028800345051223}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!114 &404596225707521282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,6 +629,22 @@ MonoBehaviour:
     m_RotationOrder: 4
   bumpEffect: {fileID: 4044529215556197517, guid: 643d8ddfd502a5147b06d54a42db1798,
     type: 3}
+--- !u!54 &6836028800345051562
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6836028800345051223}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!1 &6836028800490711256
 GameObject:
   m_ObjectHideFlags: 0

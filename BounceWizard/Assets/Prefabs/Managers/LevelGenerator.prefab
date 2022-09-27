@@ -48,6 +48,8 @@ MonoBehaviour:
   bounds: {x: 16, y: 8}
   enemyPref: {fileID: 6235339681064458079, guid: 78a7eac10f52dd942aa22da3a320040d,
     type: 3}
+  allyPref: {fileID: 6235339681064458079, guid: 8a635f5f5eb47e7489d3d7ec3b5e30c3,
+    type: 3}
   player: {fileID: 0}
   enemyRoot: {fileID: 0}
   allyRoot: {fileID: 0}

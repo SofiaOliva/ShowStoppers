@@ -40,7 +40,7 @@ public class LevelGenerator : MonoBehaviour
     {
         GenerateMap(level);
         Physics.SyncTransforms(); //so enemies dont spawn in new walls
-        GetComponentInChildren<Spawner>().Generate(level.enemyCount);
+        GetComponentInChildren<Spawner>().Generate(level);
     }
 
     void GenerateMap(LevelSO level)

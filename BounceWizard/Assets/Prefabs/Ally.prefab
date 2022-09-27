@@ -106,7 +106,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cdf124dcff50b748a6749bc4cb11c05, type: 2}
+  - {fileID: 2100000, guid: a5b6705bc4a0c424fbee047236d7f9f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,12 +215,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6235339681064458051}
   - component: {fileID: 6235339681064458050}
-  - component: {fileID: 6235339681064458049}
   - component: {fileID: 6235339681064458052}
   - component: {fileID: 5819101404471019679}
+  - component: {fileID: 4054461331008235479}
   - component: {fileID: 6235339681064458048}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Ally
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,21 +260,6 @@ MonoBehaviour:
   speed: 5
   acceleration: 10
   deacceleration: 10
---- !u!114 &6235339681064458049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6235339681064458079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f13c6610199d974393b8a6930359fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 3
-  health: 0
-  hurtScreenShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
 --- !u!114 &6235339681064458052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +338,21 @@ MonoBehaviour:
     m_RotationOrder: 4
   bumpEffect: {fileID: 4044529215556197517, guid: 643d8ddfd502a5147b06d54a42db1798,
     type: 3}
+--- !u!114 &4054461331008235479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235339681064458079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2a950a2a85cba4d9c93ae773cb0e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  health: 0
+  hurtScreenShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
 --- !u!54 &6235339681064458048
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -385,7 +385,7 @@ PrefabInstance:
         type: 3}
       propertyPath: entity
       value: 
-      objectReference: {fileID: 6235339681064458049}
+      objectReference: {fileID: 4054461331008235479}
     - target: {fileID: 8545816555406484842, guid: db5db29d8ae07f74c8223aa2f9856f5c,
         type: 3}
       propertyPath: m_RootOrder

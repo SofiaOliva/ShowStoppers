@@ -19,6 +19,7 @@ public class Lightning : MonoBehaviour
 
     private void OnEnable()
     {
+        if (!manaPool) return;
         foreach(ManaStreamSO stream in manaPool.manaStreams)
         {
             stream.Explode += Strike;
@@ -27,6 +28,7 @@ public class Lightning : MonoBehaviour
 
     private void OnDisable()
     {
+        if (!manaPool) return;
         foreach (ManaStreamSO stream in manaPool.manaStreams)
         {
             stream.Explode -= Strike;

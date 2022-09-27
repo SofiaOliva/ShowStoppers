@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8692091451804892645}
   - component: {fileID: 2013479777434992325}
   - component: {fileID: 2093952076}
-  - component: {fileID: 1935335107428633900}
-  m_Layer: 0
+  - component: {fileID: 1248601022236384002}
+  m_Layer: 10
   m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   speed: 8
   acceleration: 10
   deacceleration: 10
---- !u!114 &1935335107428633900
+--- !u!114 &1248601022236384002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2657455875157849732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5478730adc873d408249ba83de9f90c, type: 3}
+  m_Script: {fileID: 11500000, guid: e7ff60c3257170d48b2b06ebc2c62136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4596739607555479432}
   - component: {fileID: 2806245542469600412}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 3448203120822357875}
   - component: {fileID: 7312469926828629564}
   - component: {fileID: 4588452879141051396}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4372170675367645795}
   - component: {fileID: 3424299175452722017}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BounceCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -39,7 +39,7 @@ public class Player : Entity
 
         if (spawnedInWall)
         {
-            newFireball.GetComponent<Fireball>().HitEntity(this);
+            newFireball?.GetComponent<Fireball>()?.HitEntity(this);
         }
     }
 

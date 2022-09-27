@@ -13,10 +13,12 @@ public class EnemyShooter : MonoBehaviour
     public float retryTime = 1f;
 
     LayerMask targetMask;
+    Rigidbody rb;
 
     private void Awake()
     {
         targetMask = LayerMask.GetMask("Player", "Ally");
+        rb = GetComponent<Rigidbody>();
     }
 
     private void OnEnable()
@@ -45,8 +47,20 @@ public class EnemyShooter : MonoBehaviour
         if (colliderTargets.Length == 0) return false;
         Rigidbody[] targets = Array.ConvertAll<Collider, Rigidbody>(colliderTargets, item => item.attachedRigidbody);
 
-        Shoot((targets[0].position - transform.position).normalized);
-        return true;
+        Vector3 aimDirection;
+
+        if(PredictAim.TryAim(rb, targets, out aimDirection, projectileSpeed, castTime))
+        {
+            Shoot(aimDirection);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+        //Shoot((targets[0].position - transform.position).normalized);
+        //return true;
     }
 
     void Shoot(Vector3 direction)

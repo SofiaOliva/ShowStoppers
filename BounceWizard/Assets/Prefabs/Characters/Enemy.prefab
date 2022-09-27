@@ -369,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePref: {fileID: 667931899550552996, guid: 80012460eea2c834ca8662647883eea0,
     type: 3}
-  sightRange: 15
+  sightRange: 30
   castTime: 1
   projectileSpeed: 8
   cooldown: 2

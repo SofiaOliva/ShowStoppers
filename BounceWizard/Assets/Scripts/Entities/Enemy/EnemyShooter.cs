@@ -7,10 +7,13 @@ public class EnemyShooter : MonoBehaviour
 {
     public GameObject projectilePref;
     public float sightRange = 5f;
+    [Tooltip("How long between when the projectile is spawned and when it is launched")]
     public float castTime = 0.5f;
     public float projectileSpeed = 5f;
-    public float cooldown = 2f;
-    public float retryTime = 1f;
+    [Tooltip("How long to wait between throws")]
+    public Vector2 cooldownRange = new Vector2(4f,10f);
+    [Tooltip("When no good throw is calculated, how long to wait before trying to throw again")]
+    public Vector2 retryTimeRange = new Vector2(0.8f,1.5f);
 
     LayerMask targetMask;
     Rigidbody rb;
@@ -30,12 +33,10 @@ public class EnemyShooter : MonoBehaviour
     {
         while (true)
         {
-            if (TryShoot()){
-                yield return new WaitForSeconds(cooldown);
-            }
-            else
-            {
-                yield return new WaitForSeconds(retryTime);
+            yield return new WaitForSeconds(UnityEngine.Random.Range(cooldownRange.x, cooldownRange.y));
+
+            while(!TryShoot()){
+                yield return new WaitForSeconds(UnityEngine.Random.Range(retryTimeRange.x, retryTimeRange.y));
             }
             
         }
@@ -58,19 +59,15 @@ public class EnemyShooter : MonoBehaviour
         {
             return false;
         }
-
-        //Shoot((targets[0].position - transform.position).normalized);
-        //return true;
     }
 
     void Shoot(Vector3 direction)
     {
         Icicle projectile = Instantiate(projectilePref, transform.position, transform.rotation, transform).GetComponent<Icicle>();
-
-        //projectile.Cast(direction*projectileSpeed, castTime);
         StartCoroutine(Casting(projectile, direction * projectileSpeed));
     }
 
+    //Keep the projectile on top of the shooter until the cast time finishes
     IEnumerator Casting(Icicle projectile, Vector3 velocity)
     {
         projectile.transform.rotation = Quaternion.LookRotation(velocity, Vector3.up);

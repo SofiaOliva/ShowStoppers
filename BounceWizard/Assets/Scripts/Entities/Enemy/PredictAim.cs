@@ -41,7 +41,15 @@ public static class PredictAim
 
     static Vector3 Predict(Vector3 startPosition, Vector3 velocity, float time)
     {
-        return startPosition + velocity*time;
+        Vector3 direction = velocity.normalized;
+        float distance = velocity.magnitude * time;
+        RaycastHit hit;
+        while (Physics.Raycast(startPosition, direction, out hit, distance, solidMask)) {//bounce
+            startPosition = hit.point;
+            distance -= hit.distance;
+            direction = Vector3.Reflect(direction, hit.normal);
+        }
+        return startPosition + direction * distance;
     }
 
     static bool LOS(Vector3 v1, Vector3 v2)

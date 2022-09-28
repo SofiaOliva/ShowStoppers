@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: 
   seed: 0
-  randomSeed: 0
+  randomSeed: 1
   enemyCount: 5
   allyCount: 3
   mapList: {fileID: 11400000, guid: e6b579d36dca41941a8b79039c86a7f5, type: 2}

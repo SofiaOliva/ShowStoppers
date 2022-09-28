@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class HealBeacon : MonoBehaviour
 {
+    // Placehold 1
     public int healAmt = 1; 
 
-    // Start is called before the first frame update
+    // Start is called once
     void Start()
     {
-        // Start with the current health..?
-        startHealth = 
+        
     }
 
     // Update is called once per frame
@@ -19,13 +19,29 @@ public class HealBeacon : MonoBehaviour
         // Do we update anything?
     }
 
-    public Heal(){
-        // Start with current health?
-        // Attach healing to beacon's area
-        // After it heals 1, it will be destroyed
-        // Unless we want it to heal for a certain # of seconds
-
+    void OnTriggerEnter(Collider c)
+    {
+        // Line 30 requires rigidbody
+        Rigidbody rb = c.attachedRigidbody;
         
+        if(rb == null){
+            return;
+        }
+
+        Entity entity = c.attachedRigidbody.GetComponent<Entity>();
+
+        if(entity == null){
+            return;
+        }
+
+        Heal(entity);
+    }
+
+
+    void Heal(Entity entity){
+
+        entity.ChangeHealth(healAmt);
+       
     }
 
 }

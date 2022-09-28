@@ -8,8 +8,6 @@ public class Entity : MonoBehaviour
     public int maxHealth = 3;
     public int health;
 
-    public ShakeSO hurtScreenShake;
-
     public event Action<int> HealthChange;
 
     private void Start()
@@ -17,14 +15,14 @@ public class Entity : MonoBehaviour
         SetHealth(maxHealth);
     }
 
-    public virtual void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if (health <= 0) return;
-        hurtScreenShake?.DoShake();
         ChangeHealth(-damage);
+        if (health <= 0) Die();
     }
 
-    private void ChangeHealth(int change)
+    public void ChangeHealth(int change)
     {
         SetHealth(health + change);
     }
@@ -36,10 +34,6 @@ public class Entity : MonoBehaviour
         if (startHealth != health)
         {
             HealthChange?.Invoke(health);
-        }
-        if(health <= 0)
-        {
-            Die();
         }
     }
 

@@ -22,10 +22,10 @@ public class LevelGenerator : MonoBehaviour
     IEnumerator GenerateNextFrame()
     {
         yield return null;
-        GenerateWithSeed(levelSO);
+        GenerateWithSeed(levelSO.level);
     }
 
-    void GenerateWithSeed(LevelSO level)
+    void GenerateWithSeed(Level level)
     {
         int seed = level.Seed;
         Random.State oldState = Random.state;
@@ -36,14 +36,14 @@ public class LevelGenerator : MonoBehaviour
         Random.state = oldState;
     }
 
-    void Generate(LevelSO level)
+    void Generate(Level level)
     {
         GenerateMap(level);
         Physics.SyncTransforms(); //so enemies dont spawn in new walls
         GetComponentInChildren<Spawner>().Generate(level);
     }
 
-    void GenerateMap(LevelSO level)
+    void GenerateMap(Level level)
     {
         DestroyChildren(mapParent);
         GameObject map = (GameObject)PrefabUtility.InstantiatePrefab(level.mapList.GetRandomMap());

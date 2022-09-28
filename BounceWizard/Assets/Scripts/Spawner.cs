@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     LayerMask solidMask;
 
-    public void Generate(LevelSO level)
+    public void Generate(Level level)
     {
         LevelGenerator.DestroyChildren(enemyRoot);
         LevelGenerator.DestroyChildren(allyRoot);

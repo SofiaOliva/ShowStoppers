@@ -6,9 +6,27 @@ using System;
 public class Entity : MonoBehaviour
 {
     public int maxHealth = 3;
-    public int health;
+    //public int health;
+    [SerializeField] private IntReference Health;
+
+    public int health
+    {
+        get
+        {
+            return Health.Value;
+        }
+        set
+        {
+            Health.Value = value;
+        }
+    }
 
     public event Action<int> HealthChange;
+
+    public IntReference GetHealthReference()
+    {
+        return Health;
+    }
 
     public EventSO deathEvent;
 

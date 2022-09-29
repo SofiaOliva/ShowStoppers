@@ -352,7 +352,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  health: 0
+  Health:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   deathEvent: {fileID: 0}
 --- !u!114 &2830457905643868882
 MonoBehaviour:
@@ -391,25 +394,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6235339681064458051}
     m_Modifications:
-    - target: {fileID: 393992614673284483, guid: db5db29d8ae07f74c8223aa2f9856f5c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 2288368059958608801, guid: db5db29d8ae07f74c8223aa2f9856f5c,
         type: 3}
       propertyPath: m_Name
       value: EntityUI
       objectReference: {fileID: 0}
-    - target: {fileID: 2288368059958608801, guid: db5db29d8ae07f74c8223aa2f9856f5c,
+    - target: {fileID: 4833655340376839360, guid: db5db29d8ae07f74c8223aa2f9856f5c,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533210230909174181, guid: db5db29d8ae07f74c8223aa2f9856f5c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5382077948766886263, guid: db5db29d8ae07f74c8223aa2f9856f5c,
         type: 3}

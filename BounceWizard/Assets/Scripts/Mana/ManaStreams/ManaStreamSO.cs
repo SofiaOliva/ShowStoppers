@@ -15,7 +15,7 @@ public class ManaStreamSO : ScriptableObject
 
     public event Action Explode;
     public event Action<float> ManaChange;
-    public event Action OverchargeChange;
+    public event Action<float> OverchargeChange;
 
     private float Mana
     {
@@ -43,7 +43,7 @@ public class ManaStreamSO : ScriptableObject
         set
         {
             overcharge = value;
-            OverchargeChange?.Invoke();
+            OverchargeChange?.Invoke(value);
         }
     }
 
@@ -56,7 +56,7 @@ public class ManaStreamSO : ScriptableObject
     private void OnValidate()
     {
         ManaChange?.Invoke(Mana);
-        OverchargeChange?.Invoke();
+        OverchargeChange?.Invoke(Overcharge);
     }
 
     public void Fill(float time)

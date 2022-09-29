@@ -471,16 +471,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8006663282856040701, guid: 07068e72edf0e8646bb76ef041bb2933,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8691545938446712216, guid: 07068e72edf0e8646bb76ef041bb2933,
-        type: 3}
-      propertyPath: entity
-      value: 
-      objectReference: {fileID: 6836028800345051563}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07068e72edf0e8646bb76ef041bb2933, type: 3}
 --- !u!224 &5698617969467056295 stripped

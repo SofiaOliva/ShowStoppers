@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   level: 0
-  DEBUG_freezeLevel: 1
+  DEBUG_freezeLevel: 0
   levelPlan: {fileID: 11400000, guid: 6d525ee23e7d45746a8d442300edde47, type: 2}

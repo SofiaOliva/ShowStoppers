@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ManaStream_Summer
   m_EditorClassIdentifier: 
   maxMana: 3
-  mana: 1.9999987
+  mana: 2.9999979
   manaTime: 1
-  overcharge: 0
+  overcharge: 2.2530897
   overchargeTime: 3

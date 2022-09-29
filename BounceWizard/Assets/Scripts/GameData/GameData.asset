@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1875ab9c47124634c81086ef476c497f, type: 3}
-  m_Name: Level1
+  m_Script: {fileID: 11500000, guid: 1e45d14541bca644e8cf7dd79c4bfac2, type: 3}
+  m_Name: GameData
   m_EditorClassIdentifier: 
-  level:
-    seed: 0
-    randomSeed: 1
-    enemyCount: 5
-    allyCount: 3
-    mapList: {fileID: 11400000, guid: e6b579d36dca41941a8b79039c86a7f5, type: 2}
+  level: 0
+  levelPlan: {fileID: 11400000, guid: cff23a919fe3ea7448d7a75760f7e2be, type: 2}

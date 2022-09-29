@@ -10,6 +10,8 @@ public class Entity : MonoBehaviour
 
     public event Action<int> HealthChange;
 
+    public EventSO deathEvent;
+
     private void Start()
     {
         SetHealth(maxHealth);

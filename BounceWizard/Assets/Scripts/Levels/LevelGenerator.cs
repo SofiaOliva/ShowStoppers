@@ -22,21 +22,21 @@ public class LevelGenerator : MonoBehaviour
     IEnumerator GenerateNextFrame()
     {
         yield return null;
-        GenerateWithSeed(levelSO.level);
+        Generate(levelSO.level);
     }
 
-    void GenerateWithSeed(Level level)
+    public void Generate(Level level)
     {
         int seed = level.Seed;
         Random.State oldState = Random.state;
         Random.InitState(seed);
 
-        Generate(level);
+        GenerateSeedless(level);
 
         Random.state = oldState;
     }
 
-    void Generate(Level level)
+    void GenerateSeedless(Level level)
     {
         GenerateMap(level);
         Physics.SyncTransforms(); //so enemies dont spawn in new walls

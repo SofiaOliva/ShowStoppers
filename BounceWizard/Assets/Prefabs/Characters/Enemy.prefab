@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 6235339681064458052}
   - component: {fileID: 6847369730005320420}
   - component: {fileID: 5819101404471019679}
+  - component: {fileID: 8006111443937250375}
   - component: {fileID: 6235339681064458048}
   m_Layer: 8
   m_Name: Enemy
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   health: 0
-  hurtScreenShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
+  deathEvent: {fileID: 0}
 --- !u!114 &6235339681064458052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +375,20 @@ MonoBehaviour:
     m_RotationOrder: 4
   bumpEffect: {fileID: 4044529215556197517, guid: 643d8ddfd502a5147b06d54a42db1798,
     type: 3}
+--- !u!114 &8006111443937250375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235339681064458079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37b10eef67a80946a2c031f510413ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runtimeSets:
+  - {fileID: 11400000, guid: 8b86c93e363b48d4980db6ba2f62f987, type: 2}
 --- !u!54 &6235339681064458048
 Rigidbody:
   m_ObjectHideFlags: 0

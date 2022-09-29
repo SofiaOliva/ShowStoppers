@@ -9,5 +9,5 @@ public abstract class LevelPlanSO : ScriptableObject
     /// </summary>
     public abstract Level GetLevel(int number);
 
-    public abstract bool IsLastLevel(int number);
+    public abstract bool IsValidLevel(int number);
 }

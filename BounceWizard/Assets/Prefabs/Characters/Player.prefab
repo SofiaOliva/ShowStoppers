@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 6836028800345051221}
   - component: {fileID: 6836028800345051560}
   - component: {fileID: 404596225707521282}
+  - component: {fileID: 1629559451500722937}
   - component: {fileID: 6836028800345051562}
   m_Layer: 6
   m_Name: Player
@@ -530,7 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   health: 0
-  hurtScreenShake: {fileID: 11400000, guid: 3bfd6b8a013de214fa3b209a884de1a3, type: 2}
+  deathEvent: {fileID: 0}
   fireball: {fileID: 2657455875157849732, guid: 3d498f37a1e201f49809c94faf529964,
     type: 3}
   fireBallStartDistance: 1.25
@@ -629,6 +630,20 @@ MonoBehaviour:
     m_RotationOrder: 4
   bumpEffect: {fileID: 4044529215556197517, guid: 643d8ddfd502a5147b06d54a42db1798,
     type: 3}
+--- !u!114 &1629559451500722937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6836028800345051223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37b10eef67a80946a2c031f510413ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runtimeSets:
+  - {fileID: 11400000, guid: 201fa84f995ce304199abdb509afd61c, type: 2}
 --- !u!54 &6836028800345051562
 Rigidbody:
   m_ObjectHideFlags: 0

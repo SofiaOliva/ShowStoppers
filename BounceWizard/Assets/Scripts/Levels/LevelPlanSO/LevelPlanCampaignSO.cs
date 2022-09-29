@@ -11,8 +11,8 @@ public class LevelPlanCampaignSO : LevelPlanSO
         return levels.levels[number].level;
     }
 
-    public override bool IsLastLevel(int number)
+    public override bool IsValidLevel(int number)
     {
-        return number+1 >= levels.levels.Length;
+        return number < levels.levels.Length;
     }
 }

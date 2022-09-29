@@ -4,42 +4,45 @@ using UnityEngine;
 
 public class Lightning : MonoBehaviour
 {
-    public Transform enemyRoot;
-    public Transform allyRoot;
+    public RuntimeSet_Entity allySet;
 
     public GameObject lightningEffect;
     ManaPool manaPool;
     [SerializeField]
     ShakeSO shake;
 
+    List<ManaStreamSO> subbedStreams;
+
     public void Awake()
     {
         manaPool = FindObjectOfType<ManaPool>();
+        subbedStreams = new List<ManaStreamSO>();
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         if (!manaPool) return;
         foreach(ManaStreamSO stream in manaPool.manaStreams)
         {
             stream.Explode += Strike;
+            subbedStreams.Add(stream);
         }
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
-        if (!manaPool) return;
-        foreach (ManaStreamSO stream in manaPool.manaStreams)
+        foreach(ManaStreamSO stream in subbedStreams)
         {
             stream.Explode -= Strike;
         }
+        subbedStreams.Clear();
     }
 
     private void Strike()
     {
-        int allyCount = allyRoot.childCount;
-        if (allyCount == 0) return;
-        Entity struckEntity = allyRoot.GetChild(Random.Range(0, allyCount)).gameObject.GetComponent<Entity>();
+        if (allySet.Count == 0) return;
+
+        Entity struckEntity = allySet[Random.Range(0, allySet.Count)];
         GameObject spawnedBolt = Instantiate(lightningEffect, struckEntity.transform.position, Quaternion.identity);
         Destroy(spawnedBolt, 0.25f);
         shake.DoShake();

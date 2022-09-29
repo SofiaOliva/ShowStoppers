@@ -7,14 +7,14 @@ using UnityEditor;
 public class LevelGenerator : MonoBehaviour
 {
     public LevelSO levelSO;
-    public bool generate = false;
     public Transform mapParent;
+    public bool generateButton = false;
 
     private void OnValidate()
     {
-        if (generate)
+        if (generateButton)
         {
-            generate = false;
+            generateButton = false;
             StartCoroutine(GenerateNextFrame());
         }
     }

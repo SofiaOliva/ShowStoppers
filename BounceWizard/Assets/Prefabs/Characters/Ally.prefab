@@ -356,7 +356,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  deathEvent: {fileID: 0}
+  hitShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
 --- !u!114 &2830457905643868882
 MonoBehaviour:
   m_ObjectHideFlags: 0

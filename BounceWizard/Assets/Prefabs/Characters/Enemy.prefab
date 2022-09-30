@@ -276,8 +276,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  health: 0
-  deathEvent: {fileID: 0}
+  Health:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  hitShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
 --- !u!114 &6235339681064458052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833655340376839360, guid: db5db29d8ae07f74c8223aa2f9856f5c,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5382077948766886263, guid: db5db29d8ae07f74c8223aa2f9856f5c,
         type: 3}

@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour
     public int maxHealth = 3;
     //public int health;
     [SerializeField] private IntReference Health;
+    [SerializeField] ShakeSO hitShake;
 
     public int health
     {
@@ -28,8 +29,6 @@ public class Entity : MonoBehaviour
         return Health;
     }
 
-    public EventSO deathEvent;
-
     private void Start()
     {
         SetHealth(maxHealth);
@@ -39,6 +38,7 @@ public class Entity : MonoBehaviour
     {
         if (health <= 0) return;
         ChangeHealth(-damage);
+        hitShake.DoShake();
         if (health <= 0) Die();
     }
 

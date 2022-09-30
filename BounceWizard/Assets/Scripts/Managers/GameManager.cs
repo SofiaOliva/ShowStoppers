@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -71,16 +72,14 @@ public class GameManager : MonoBehaviour
         if (!levelPlaying) return;
         EndLevel();
         gameData.WinLevel();
-        if (!gameData.HasFinished())
-        {
-            transitionEvent.Trigger(new SceneTransition("Game"));
-        }
-        else
+        float transitionTime = 1f;
+        if (gameData.HasFinished())
         {
             print("You beat all the levels! Restarting...");
             gameData.Reset();
-            transitionEvent.Trigger(new SceneTransition("Game", 2f));
+            transitionTime = 2f;
         }
+        transitionEvent.Trigger(new SceneTransition(SceneManager.GetActiveScene().name, transitionTime));
     }
 
     void Lose()
@@ -89,6 +88,6 @@ public class GameManager : MonoBehaviour
         EndLevel();
         print("You lost! Restarting...");
         gameData.Reset();
-        transitionEvent.Trigger(new SceneTransition("Game", 2f));
+        transitionEvent.Trigger(new SceneTransition(SceneManager.GetActiveScene().name, 2f));
     }
 }

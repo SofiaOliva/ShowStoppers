@@ -25,6 +25,7 @@ public class TransitionManager : MonoBehaviour
         isTransitioning = true;
         print("Transitioning to scene " + transition.sceneName);
         StartCoroutine(Transitioning(transition));
+        GetComponentInChildren<ScreenWipe>().Transition(transition);
     }
 
     IEnumerator Transitioning(SceneTransition transition)

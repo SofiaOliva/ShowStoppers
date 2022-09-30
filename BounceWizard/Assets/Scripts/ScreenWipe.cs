@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ScreenWipe : MonoBehaviour
+{
+    //public EventSO_SceneTransition transitionEvent;
+    //Image wipeImage;
+    Material wipeMaterial;
+    public AnimationCurve wipeCurve;
+
+    private void OnEnable()
+    {
+        //wipeImage = GetComponentInChildren<Image>();
+        wipeMaterial = GetComponentInChildren<Image>().material;
+        wipeMaterial.SetFloat("_TransIn", 0f);
+        wipeMaterial.SetFloat("_TransOut", 0f);
+        StartCoroutine(Transitioning(true, 0.5f));
+        //transitionEvent.Event += Transition;
+    }
+
+    private void OnDisable()
+    {
+        //transitionEvent.Event -= Transition;
+    }
+
+    public void Transition(SceneTransition transition)
+    {
+        StartCoroutine(Transitioning(false, transition.transitionTime));
+    }
+
+    IEnumerator Transitioning(bool transIn, float time)
+    {
+        float prog = 0f;
+        while (prog < 1f) {
+            prog = Mathf.Min(1f, prog + Time.deltaTime/time);
+            wipeMaterial.SetFloat(transIn ? "_TransIn" : "_TransOut", wipeCurve.Evaluate(prog));
+            yield return null;
+        }
+        
+    }
+}

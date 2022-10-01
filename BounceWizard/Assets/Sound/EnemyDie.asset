@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b746b76d3c53e9244965c2566d92dbf9, type: 3}
   volume: 0.49
   spatialBlend: 0.62
-  pitchRange: {x: 0.6, y: 1}
+  pitchRange: {x: 4, y: 1.6}

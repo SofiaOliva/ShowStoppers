@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        InitializeLevel(gameData.levelPlan.GetLevel(gameData.level));
+        InitializeLevel(gameData.levelPlan.GetLevel(gameData.Level));
         enemies.EmptyEvent += OnAllEnemiesDead;
         allies.EmptyEvent += OnAllAlliesDead;
 
@@ -75,19 +75,24 @@ public class GameManager : MonoBehaviour
         float transitionTime = 1f;
         if (gameData.HasFinished())
         {
-            print("You beat all the levels! Restarting...");
+            print("You beat all the levels!");
             gameData.Reset();
             transitionTime = 2f;
+            transitionEvent.Trigger(new SceneTransition("Menu", 2f));
         }
-        transitionEvent.Trigger(new SceneTransition(SceneManager.GetActiveScene().name, transitionTime));
+        else
+        {
+            transitionEvent.Trigger(new SceneTransition("Game", transitionTime));
+        }
+        
     }
 
     void Lose()
     {
         if (!levelPlaying) return;
         EndLevel();
-        print("You lost! Restarting...");
+        print("You lost!");
         gameData.Reset();
-        transitionEvent.Trigger(new SceneTransition(SceneManager.GetActiveScene().name, 2f));
+        transitionEvent.Trigger(new SceneTransition("Menu", 2f));
     }
 }

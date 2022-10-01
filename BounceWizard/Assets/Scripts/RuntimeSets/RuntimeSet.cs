@@ -5,7 +5,7 @@ using System;
 
 public abstract class RuntimeSet<T> : ScriptableObject
 {
-    [HideInInspector] private List<T> list;
+    [HideInInspector] private List<T> list = new List<T>();
 
     public event Action RemoveEvent;
     public event Action EmptyEvent;

@@ -11,20 +11,31 @@ public class GameDataSO : ScriptableObject
     public bool DEBUG_freezeLevel = false;
     public LevelPlanSO levelPlan;
 
+    public int Level
+    {
+        get
+        {
+            return level;
+        }
+        set
+        {
+            if (Application.isEditor && DEBUG_freezeLevel) return;
+            level = value;
+        }
+    }
+
     public void WinLevel()
     {
-        if (Application.isEditor && DEBUG_freezeLevel) return;
-        ++level;
+        ++Level;
     }
 
     public bool HasFinished()
     {
-        return !levelPlan.IsValidLevel(level);
+        return !levelPlan.IsValidLevel(Level);
     }
 
     public void Reset()
     {
-        if (Application.isEditor && DEBUG_freezeLevel) return;
-        level = 0;
+        Level = 0;
     }
 }

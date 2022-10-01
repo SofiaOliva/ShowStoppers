@@ -14,8 +14,7 @@ public class ScreenWipe : MonoBehaviour
     {
         //wipeImage = GetComponentInChildren<Image>();
         wipeMaterial = GetComponentInChildren<Image>().material;
-        wipeMaterial.SetFloat("_TransIn", 0f);
-        wipeMaterial.SetFloat("_TransOut", 0f);
+        ResetShader(true);
         StartCoroutine(Transitioning(true, 0.5f));
         //transitionEvent.Event += Transition;
     }
@@ -23,6 +22,13 @@ public class ScreenWipe : MonoBehaviour
     private void OnDisable()
     {
         //transitionEvent.Event -= Transition;
+        ResetShader(false);
+    }
+
+    void ResetShader(bool dark)
+    {
+        wipeMaterial.SetFloat("_TransIn", dark ? 0f : 1f);
+        wipeMaterial.SetFloat("_TransOut", 0f);
     }
 
     public void Transition(SceneTransition transition)

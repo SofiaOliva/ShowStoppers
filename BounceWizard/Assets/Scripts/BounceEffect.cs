@@ -12,6 +12,7 @@ public class BounceEffect : MonoBehaviour
     Vector3 startScale;
     float bounceProg = 0f;
     public GameObject bumpEffect;
+    public SoundSO bounceSound;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class BounceEffect : MonoBehaviour
         bounceProg = 1f;
         ContactPoint point = collision.GetContact(0);
         Instantiate(bumpEffect, point.point, Quaternion.LookRotation(point.normal, Vector3.up));
+        if(bounceSound) SoundManager.Play(bounceSound, transform.position);
     }
 
     private void Update()

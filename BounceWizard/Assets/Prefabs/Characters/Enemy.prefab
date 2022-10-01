@@ -378,6 +378,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   bumpEffect: {fileID: 4044529215556197517, guid: 643d8ddfd502a5147b06d54a42db1798,
     type: 3}
+  bounceSound: {fileID: 11400000, guid: 091843033e7a1c64db1cc84e8b5ee610, type: 2}
 --- !u!114 &8006111443937250375
 MonoBehaviour:
   m_ObjectHideFlags: 0

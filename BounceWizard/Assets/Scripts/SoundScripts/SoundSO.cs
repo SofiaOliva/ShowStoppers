@@ -29,4 +29,9 @@ public class SoundSO : ScriptableObject
             return volume;
         }
     }
+
+    public void Play(Vector3 position)
+    {
+        SoundManager.Play(this, position);
+    }
 }

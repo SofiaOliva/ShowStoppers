@@ -9,6 +9,7 @@ public class Entity : MonoBehaviour
     //public int health;
     [SerializeField] private IntReference Health;
     [SerializeField] ShakeSO hitShake;
+    [SerializeField] SoundSO dieSound;
 
     public int health
     {
@@ -59,6 +60,7 @@ public class Entity : MonoBehaviour
 
     public void Die()
     {
+        dieSound.Play(transform.position);
         Destroy(gameObject);
     }
 }

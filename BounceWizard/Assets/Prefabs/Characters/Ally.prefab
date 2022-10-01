@@ -358,6 +358,7 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 0}
   hitShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
+  dieSound: {fileID: 11400000, guid: 31f2cfea6ba443d40a20fdca2a2309ed, type: 2}
 --- !u!114 &2830457905643868882
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class Lightning : MonoBehaviour
     public RuntimeSet_Entity allySet;
 
     public GameObject lightningEffect;
+    [SerializeField] SoundSO thunderSound;
     ManaPool manaPool;
     [SerializeField]
     ShakeSO shake;
@@ -43,6 +44,7 @@ public class Lightning : MonoBehaviour
         if (allySet.Count == 0) return;
 
         Entity struckEntity = allySet[Random.Range(0, allySet.Count)];
+        thunderSound.Play(transform.position);
         GameObject spawnedBolt = Instantiate(lightningEffect, struckEntity.transform.position, Quaternion.identity);
         Destroy(spawnedBolt, 0.25f);
         shake.DoShake();

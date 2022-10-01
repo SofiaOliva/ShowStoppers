@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5207906ac3314e46a9d5219e4484bcc, type: 3}
-  m_Name: Bounce
+  m_Name: Thunder
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: b746b76d3c53e9244965c2566d92dbf9, type: 3}
-  volume: 0.49
-  spatialBlend: 0.62
-  pitchRange: {x: 0.6, y: 1}
+  - {fileID: 8300000, guid: 05d3bebf701584c429b6fd558e8099a5, type: 3}
+  volume: 1.5
+  spatialBlend: 0
+  pitchRange: {x: 0.6, y: 0.6}

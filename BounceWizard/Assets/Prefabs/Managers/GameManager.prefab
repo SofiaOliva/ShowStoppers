@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 5260ae0245c9ed64ea83b93ed679647f, type: 2}
+  levelGenerator: {fileID: 0}
   player: {fileID: 11400000, guid: 201fa84f995ce304199abdb509afd61c, type: 2}
   enemies: {fileID: 11400000, guid: 8b86c93e363b48d4980db6ba2f62f987, type: 2}
   allies: {fileID: 11400000, guid: ccc41355fcbbc244eab38332d9c821ec, type: 2}
-  levelGenerator: {fileID: 0}
+  levelResultsEvent: {fileID: 11400000, guid: 9e01acf043df91d4eaf48443881bdfc9, type: 2}
   transitionEvent: {fileID: 11400000, guid: a19cfef3e0ddb374583ef4b6d2bb38ad, type: 2}

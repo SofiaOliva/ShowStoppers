@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public RuntimeSet_Entity enemies;
     public RuntimeSet_Entity allies;
 
+    public EventSO_LevelResults levelResultsEvent;
     public EventSO_SceneTransition transitionEvent;
 
     bool levelPlaying = false;
@@ -54,11 +55,15 @@ public class GameManager : MonoBehaviour
 
     void OnPlayerDead()
     {
+        if (!levelPlaying) return;
+        levelResultsEvent.Trigger(new LevelResults(false, "You were slain!"));
         Lose();
     }
 
     void OnAllAlliesDead()
     {
+        if (!levelPlaying) return;
+        levelResultsEvent.Trigger(new LevelResults(false, "All allies were slain!"));
         Lose();
     }
 
@@ -78,21 +83,22 @@ public class GameManager : MonoBehaviour
             print("You beat all the levels!");
             gameData.Reset();
             transitionTime = 2f;
-            transitionEvent.Trigger(new SceneTransition("Menu", 2f));
+            levelResultsEvent.Trigger(new LevelResults(true));
+            //transitionEvent.Trigger(new SceneTransition("Menu", 2f));
         }
         else
         {
-            transitionEvent.Trigger(new SceneTransition("Game", transitionTime));
+            transitionEvent.Trigger(new SceneTransition(SceneManager.GetActiveScene().name, transitionTime));
         }
         
     }
 
     void Lose()
     {
-        if (!levelPlaying) return;
+        //if (!levelPlaying) return;
         EndLevel();
         print("You lost!");
         gameData.Reset();
-        transitionEvent.Trigger(new SceneTransition("Menu", 2f));
+        //transitionEvent.Trigger(new SceneTransition("Menu", 2f));
     }
 }

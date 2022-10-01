@@ -239,6 +239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4344037880439941496, guid: e150fb70ad831d6428fda269cfd18f29,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 230856844684715455}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e150fb70ad831d6428fda269cfd18f29, type: 3}
 --- !u!4 &8213240133789124891 stripped

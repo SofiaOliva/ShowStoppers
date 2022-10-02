@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LightningShake
   m_EditorClassIdentifier: 
   shake:
-    magnitude: 0.7
-    duration: 0.2
+    magnitude: 1.4
+    duration: 0.5
     prog: 0
   shakeEvent: {fileID: 11400000, guid: 05b2dcd6203057045b20c3d354dcea2c, type: 2}

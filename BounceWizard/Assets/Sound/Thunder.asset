@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Thunder
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 05d3bebf701584c429b6fd558e8099a5, type: 3}
-  volume: 1.5
+  - {fileID: 8300000, guid: 0c4dd1750126f354ab0323f2da8a41f7, type: 3}
+  volume: 0.8
   spatialBlend: 0
-  pitchRange: {x: 0.6, y: 0.6}
+  pitchRange: {x: 0.9, y: 1.1}

@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  hitSound: {fileID: 11400000, guid: 019b96197de3da8459d0ed3dbb40e38f, type: 2}
   castSound: {fileID: 11400000, guid: 6383283e11833884fb91929328a9bc8a, type: 2}
   explodeEffect: {fileID: 2443106124929233945, guid: 82ff7b4ca9a41734886ee54323794cd1,
     type: 3}

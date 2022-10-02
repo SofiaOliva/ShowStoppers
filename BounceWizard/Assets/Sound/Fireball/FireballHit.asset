@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22ba6468ec9d3774e99905e1586591d2, type: 3}
-  m_Name: EnemyHurtShake
+  m_Script: {fileID: 11500000, guid: f5207906ac3314e46a9d5219e4484bcc, type: 3}
+  m_Name: FireballHit
   m_EditorClassIdentifier: 
-  shake:
-    magnitude: 0.4
-    duration: 0.1
-    prog: 0
-  shakeEvent: {fileID: 11400000, guid: 05b2dcd6203057045b20c3d354dcea2c, type: 2}
+  clips:
+  - {fileID: 8300000, guid: 34f7041abc4183840b354926f4f66cf9, type: 3}
+  volume: 0.7
+  spatialBlend: 0.259
+  pitchRange: {x: 0.8, y: 1.2}

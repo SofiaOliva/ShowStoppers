@@ -5,7 +5,14 @@ using UnityEngine;
 public class HitGiver : MonoBehaviour
 {
     public int damage = 1;
+    public SoundSO castSound;
+    public SoundSO hitSound;
     bool active = true;
+
+    private void OnEnable()
+    {
+        castSound?.Play(transform.position);
+    }
 
     public void SetActive(bool value)
     {
@@ -32,6 +39,6 @@ public class HitGiver : MonoBehaviour
 
     protected virtual void OnHit(Entity entity)
     {
-
+        hitSound?.Play(transform.position);
     }
 }

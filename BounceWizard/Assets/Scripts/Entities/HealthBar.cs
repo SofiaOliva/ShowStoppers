@@ -7,25 +7,29 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     private Entity entity;
-    [SerializeField] Image fillImage;
+    [SerializeField] Image imageDiscrete;
+    [SerializeField] Image imageContinous;
 
 
-    IntReference healthReference;
+    FloatReference healthReference;
 
     void OnEnable()
     {
         entity = GetComponentInParent<Entity>();
+        if (!entity) return;
         healthReference = entity.GetHealthReference();
         healthReference.ChangeEvent += OnHealthChange;
     }
 
     private void OnDisable()
     {
+        if (healthReference == null) return;
         healthReference.ChangeEvent -= OnHealthChange;
     }
 
-    void OnHealthChange(int health)
+    void OnHealthChange(float health)
     {
-        fillImage.fillAmount = (float)health / entity.maxHealth;
+        imageDiscrete.fillAmount = Mathf.Floor(health) / entity.maxHealth;
+        imageContinous.fillAmount = health / entity.maxHealth;
     }
 }

@@ -9,7 +9,7 @@ public class LevelPlanEndlessSO : LevelPlanSO
     public override Level GetLevel(int number)
     {
         Level newLevel = new Level();
-        newLevel.allyCount = (number+1) / 2 + 2;
+        newLevel.allyCount = (number+1) / 3 + 1;
         newLevel.enemyCount = number+1;
         newLevel.mapList = mapList;
         newLevel.randomSeed = true;

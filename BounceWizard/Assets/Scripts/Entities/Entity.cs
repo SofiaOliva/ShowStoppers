@@ -7,11 +7,13 @@ public class Entity : MonoBehaviour
 {
     public int maxHealth = 3;
     //public int health;
-    [SerializeField] private IntReference Health;
+    [SerializeField] private FloatReference Health;
     [SerializeField] ShakeSO hitShake;
     [SerializeField] SoundSO dieSound;
 
-    public int health
+    public bool blessed = false;
+
+    public float health
     {
         get
         {
@@ -23,9 +25,7 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public event Action<int> HealthChange;
-
-    public IntReference GetHealthReference()
+    public FloatReference GetHealthReference()
     {
         return Health;
     }
@@ -37,25 +37,20 @@ public class Entity : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (health <= 0) return;
+        if (health < 1) return;
         ChangeHealth(-damage);
         hitShake.DoShake();
-        if (health <= 0) Die();
+        if (health < 1) Die();
     }
 
-    public void ChangeHealth(int change)
+    public void ChangeHealth(float change)
     {
         SetHealth(health + change);
     }
 
-    private void SetHealth(int newHealth)
+    private void SetHealth(float newHealth)
     {
-        int startHealth = health;
-        health = Mathf.Clamp(newHealth, 0, maxHealth);
-        if (startHealth != health)
-        {
-            HealthChange?.Invoke(health);
-        }
+        health = Mathf.Clamp(newHealth, 0f, maxHealth);
     }
 
     public void Die()

@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6264bfdb263a84b8216f9232529b06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entity: {fileID: 0}
 --- !u!1 &6235339680020773801
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +374,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   hitShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
   dieSound: {fileID: 11400000, guid: 31f2cfea6ba443d40a20fdca2a2309ed, type: 2}
+  blessed: 0
 --- !u!114 &2830457905643868882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +592,11 @@ PrefabInstance:
       propertyPath: entity
       value: 
       objectReference: {fileID: 4054461331008235479}
+    - target: {fileID: 8360629412180439954, guid: db5db29d8ae07f74c8223aa2f9856f5c,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8545816555406484842, guid: db5db29d8ae07f74c8223aa2f9856f5c,
         type: 3}
       propertyPath: m_RootOrder

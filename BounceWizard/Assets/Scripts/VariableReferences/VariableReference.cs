@@ -44,7 +44,7 @@ public class VariableReference<T> : ISerializationCallbackReceiver
     void ISerializationCallbackReceiver.OnBeforeSerialize() => this.OnValidate();
     void ISerializationCallbackReceiver.OnAfterDeserialize() { }
 }
-
+[System.Serializable]
 public class FloatReference : VariableReference<float>
 {
 

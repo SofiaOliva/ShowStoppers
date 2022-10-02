@@ -5,7 +5,12 @@ using UnityEngine;
 public class HealBeacon : MonoBehaviour
 {
     // Placehold 1
-    public int healAmt = 1; 
+    [Tooltip("Initial burst of healing when entity enters aura for the first time")]
+    public int healAmt = 1;
+    [Tooltip("How many seconds before blessed entity recovers a health point")]
+    public float healTime = 3f;
+
+    public GameObject blessedEffectPref;
 
     // Start is called once
     void Start()
@@ -19,9 +24,9 @@ public class HealBeacon : MonoBehaviour
         // Do we update anything?
     }
 
-    void OnTriggerEnter(Collider c)
+    private void OnTriggerStay(Collider other)
     {
-        HurtBox hurtbox = c.GetComponent<HurtBox>();
+        HurtBox hurtbox = other.GetComponent<HurtBox>();
         if (!hurtbox) return;
 
         Heal(hurtbox.entity);
@@ -29,8 +34,16 @@ public class HealBeacon : MonoBehaviour
 
 
     void Heal(Entity entity){
-
-        entity.ChangeHealth(healAmt);
+        if (!entity.blessed)
+        {
+            entity.ChangeHealth(healAmt);
+            entity.blessed = true;
+            Instantiate(blessedEffectPref, entity.transform.position, Quaternion.identity, entity.transform);
+        }
+        else
+        {
+            entity.ChangeHealth(Time.fixedDeltaTime/healTime);
+        }
        
     }
 

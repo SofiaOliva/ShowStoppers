@@ -21,20 +21,10 @@ public class HealBeacon : MonoBehaviour
 
     void OnTriggerEnter(Collider c)
     {
-        // Line 30 requires rigidbody
-        Rigidbody rb = c.attachedRigidbody;
-        
-        if(rb == null){
-            return;
-        }
+        HurtBox hurtbox = c.GetComponent<HurtBox>();
+        if (!hurtbox) return;
 
-        Entity entity = c.attachedRigidbody.GetComponent<Entity>();
-
-        if(entity == null){
-            return;
-        }
-
-        Heal(entity);
+        Heal(hurtbox.entity);
     }
 
 

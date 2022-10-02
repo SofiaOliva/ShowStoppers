@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4769532535885670642}
   - component: {fileID: 5798271594084208627}
+  - component: {fileID: 3772195266726297489}
   m_Layer: 9
-  m_Name: HitCollider
+  m_Name: HurtCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +46,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3772195266726297489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276340155650672505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6264bfdb263a84b8216f9232529b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6235339680020773801
 GameObject:
   m_ObjectHideFlags: 0

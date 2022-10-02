@@ -15,21 +15,11 @@ public class HitGiver : MonoBehaviour
     void OnTriggerEnter(Collider c)
     {
         if (!active) return;
-        Rigidbody rb = c.attachedRigidbody;
+        HurtBox hurtbox = c.GetComponent<HurtBox>();
+        if (!hurtbox) return;
 
-        if (rb == null)
-        {
-            return;
-        }
 
-        Entity entity = c.attachedRigidbody.GetComponent<Entity>();
-
-        if (entity == null)
-        {
-            return;
-        }
-
-        HitEntity(entity);
+        HitEntity(hurtbox.entity);
     }
 
     public void HitEntity(Entity entity)

@@ -6,7 +6,7 @@ public class Player : Entity
 {
     public GameObject fireball;
     public float fireBallStartDistance = 1.25f;
-    public GameObject beacon;
+    public GameObject beaconSeedPrefab;
 
     public ManaPool manaPool;
 
@@ -52,7 +52,8 @@ public class Player : Entity
 
         if (!manaPool.TryCast(1)) return;
 
-        GameObject newBeacon = Instantiate(beacon, worldPosition, Quaternion.identity);
+        BeaconSeed beaconSeed = Instantiate(beaconSeedPrefab, transform.position, Quaternion.identity).GetComponent<BeaconSeed>();
+        beaconSeed.ThrowTo(worldPosition);
     }
 
     bool InWall(Vector3 pos)

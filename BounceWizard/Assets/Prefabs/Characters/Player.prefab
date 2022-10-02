@@ -108,10 +108,12 @@ MonoBehaviour:
     Variable: {fileID: 0}
   hitShake: {fileID: 11400000, guid: 3bfd6b8a013de214fa3b209a884de1a3, type: 2}
   dieSound: {fileID: 11400000, guid: e70a0cb97b3b9b8488f2ee7ac51eb6bb, type: 2}
+  blessed: 0
   fireball: {fileID: 2657455875157849732, guid: 3d498f37a1e201f49809c94faf529964,
     type: 3}
   fireBallStartDistance: 1.25
-  beacon: {fileID: 3414369122091358203, guid: de4d4ed39232b2f4f8a29a471fd51398, type: 3}
+  beaconSeedPrefab: {fileID: 4060902532068330300, guid: 679dcd9075ebb1743bc9ea63ddc3173e,
+    type: 3}
   manaPool: {fileID: 8160137753944833089}
 --- !u!114 &6836028800345051221
 MonoBehaviour:
@@ -180,6 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceT: {fileID: 6836028801410920913}
   bounceTime: 0.2
+  bounceMagnitude: 1
   bounceCurve:
     serializedVersion: 2
     m_Curve:
@@ -526,6 +529,11 @@ PrefabInstance:
     - target: {fileID: 562073394857521312, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345319119640493999, guid: 07068e72edf0e8646bb76ef041bb2933,
+        type: 3}
+      propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724110004716543815, guid: 07068e72edf0e8646bb76ef041bb2933,

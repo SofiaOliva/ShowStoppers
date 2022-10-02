@@ -26,6 +26,12 @@ public class HitGiver : MonoBehaviour
     {
         entity.TakeDamage(damage);
         active = false;
+        OnHit(entity);
         Destroy(gameObject);
+    }
+
+    protected virtual void OnHit(Entity entity)
+    {
+
     }
 }

@@ -6,18 +6,20 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject levelEndScreen;
-    public GameObject victoryScreen;
-    public GameObject gameOverScreen;
-    public TMP_Text gameOverText;
+    //public GameObject levelEndScreen;
+    //public GameObject victoryScreen;
+    //public GameObject gameOverScreen;
+    //public TMP_Text gameOverText;
     public EventSO_LevelResults resultsEvent;
     public EventSO_SceneTransition transitionEvent;
+    private Canvas canvas;
 
     private void Awake()
     {
-        levelEndScreen.SetActive(false);
-        victoryScreen.SetActive(false);
-        gameOverScreen.SetActive(false);
+        canvas = GetComponentInChildren<Canvas>();
+        //levelEndScreen.SetActive(false);
+        //victoryScreen.SetActive(false);
+        //gameOverScreen.SetActive(false);
     }
 
     private void OnEnable()
@@ -42,16 +44,11 @@ public class UIManager : MonoBehaviour
 
     void OnLevelResults(LevelResults results)
     {
-        if (results.victory)
-        {
-            victoryScreen.SetActive(true);
-        }
-        else
-        {
-            gameOverText.text = results.message;
-            gameOverScreen.SetActive(true);
-
-        }
-        levelEndScreen.SetActive(true);
+        LevelPlanSO plan = results.gameData.levelPlan;
+        GameObject screen = Instantiate(results.victory ? plan.winScreen : plan.failScreen);
+        screen.transform.SetParent(canvas.transform);
+        screen.transform.localScale = Vector3.one;
+        screen.transform.localPosition = Vector3.zero;
+        screen.GetComponent<LevelEndScreen>().SetResults(results);
     }
 }

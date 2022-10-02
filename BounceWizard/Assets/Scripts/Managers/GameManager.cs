@@ -56,14 +56,14 @@ public class GameManager : MonoBehaviour
     void OnPlayerDead()
     {
         if (!levelPlaying) return;
-        levelResultsEvent.Trigger(new LevelResults(false, "You were slain!"));
+        levelResultsEvent.Trigger(new LevelResults(false, gameData, "You were slain!"));
         Lose();
     }
 
     void OnAllAlliesDead()
     {
         if (!levelPlaying) return;
-        levelResultsEvent.Trigger(new LevelResults(false, "All allies were slain!"));
+        levelResultsEvent.Trigger(new LevelResults(false, gameData, "All allies were slain!"));
         Lose();
     }
 
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
             print("You beat all the levels!");
             gameData.Reset();
             transitionTime = 2f;
-            levelResultsEvent.Trigger(new LevelResults(true));
+            levelResultsEvent.Trigger(new LevelResults(true, gameData));
             //transitionEvent.Trigger(new SceneTransition("Menu", 2f));
         }
         else
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         //if (!levelPlaying) return;
         EndLevel();
         print("You lost!");
-        gameData.Reset();
+        gameData.levelPlan.EndLevel(gameData);
         //transitionEvent.Trigger(new SceneTransition("Menu", 2f));
     }
 }

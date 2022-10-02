@@ -11,10 +11,12 @@ public struct LevelResults
 {
     public bool victory;
     public string message;
+    public GameDataSO gameData;
 
-    public LevelResults(bool _victory, string _message = "")
+    public LevelResults(bool _victory, GameDataSO _gameData, string _message = "")
     {
         victory = _victory;
         message = _message;
+        gameData = _gameData;
     }
 }

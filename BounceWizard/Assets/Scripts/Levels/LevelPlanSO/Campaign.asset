@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fd836fbb2d89543af8fad6c184cabd, type: 3}
   m_Name: Campaign
   m_EditorClassIdentifier: 
+  failScreen: {fileID: 5919781002309147959, guid: d0e76f750af1821438d635e6566fdf21,
+    type: 3}
+  winScreen: {fileID: 6479784239750503566, guid: 37f3196767e575f4d904d6fd7257108e,
+    type: 3}
   levels: {fileID: 11400000, guid: 8429dee0941c04e4c99a30582e2059cb, type: 2}

@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7507f8bc457a2a944b89b57c56d79648, type: 3}
   m_Name: Endless
   m_EditorClassIdentifier: 
+  failScreen: {fileID: 5919781002309147959, guid: f89c719e64df6ad4dafeea6cc6fba2f7,
+    type: 3}
+  winScreen: {fileID: 6479784239750503566, guid: 37f3196767e575f4d904d6fd7257108e,
+    type: 3}
   mapList: {fileID: 11400000, guid: e6b579d36dca41941a8b79039c86a7f5, type: 2}

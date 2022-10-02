@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelPlanCampaignSO : LevelPlanSO
 {
     public LevelListSO levels;
+
     public override Level GetLevel(int number)
     {
         return levels.levels[number].level;
@@ -14,5 +15,10 @@ public class LevelPlanCampaignSO : LevelPlanSO
     public override bool IsValidLevel(int number)
     {
         return number < levels.levels.Length;
+    }
+
+    public override void EndLevel(GameDataSO data)
+    {
+        
     }
 }

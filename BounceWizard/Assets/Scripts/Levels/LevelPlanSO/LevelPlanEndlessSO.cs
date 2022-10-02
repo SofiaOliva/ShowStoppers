@@ -21,4 +21,9 @@ public class LevelPlanEndlessSO : LevelPlanSO
     {
         return true;
     }
+
+    public override void EndLevel(GameDataSO data)
+    {
+        data.Reset();
+    }
 }

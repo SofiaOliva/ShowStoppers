@@ -112,6 +112,7 @@ MonoBehaviour:
   fireball: {fileID: 2657455875157849732, guid: 3d498f37a1e201f49809c94faf529964,
     type: 3}
   fireBallStartDistance: 1.25
+  fireballCastCooldownTime: 0.3
   beaconSeedPrefab: {fileID: 4060902532068330300, guid: 679dcd9075ebb1743bc9ea63ddc3173e,
     type: 3}
   manaPool: {fileID: 8160137753944833089}

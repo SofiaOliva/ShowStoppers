@@ -46,7 +46,13 @@ public class LevelGenerator : MonoBehaviour
     void GenerateMap(Level level)
     {
         DestroyChildren(mapParent);
-        GameObject map = (GameObject)PrefabUtility.InstantiatePrefab(level.mapList.GetRandomMap());
+        GameObject map;
+        GameObject mapPrefab = level.mapList.GetRandomMap();
+#if UNITY_EDITOR
+        map = (GameObject)PrefabUtility.InstantiatePrefab(mapPrefab);
+#else
+        map = Instantiate(mapPrefab);
+#endif
         map.transform.position = Vector3.zero;
         map.transform.SetParent(mapParent);
         Vector2 flipXZ = new Vector2(Random.Range(0, 2) == 0 ? 1f : -1f, Random.Range(0, 2) == 0 ? 1f : -1f);
@@ -55,9 +61,9 @@ public class LevelGenerator : MonoBehaviour
 
     public static void DestroyChildren(Transform parent)
     {
-        for (int i = parent.childCount; i > 0; --i)
+        for (int i = parent.childCount-1; i >= 0; --i)
         {
-            DestroySafe(parent.GetChild(0).gameObject);
+            DestroySafe(parent.GetChild(i).gameObject);
         }
     }
 

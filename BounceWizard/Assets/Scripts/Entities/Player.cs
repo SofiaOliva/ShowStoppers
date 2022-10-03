@@ -6,6 +6,8 @@ public class Player : Entity
 {
     public GameObject fireball;
     public float fireBallStartDistance = 1.25f;
+    public float fireballCastCooldownTime = 0.1f;
+    private float fireballCastCooldownProgress = 0f;
     public GameObject beaconSeedPrefab;
 
     public ManaPool manaPool;
@@ -13,20 +15,34 @@ public class Player : Entity
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            LaunchFireball();
+            TryCastFireball();
         }
         if (Input.GetKeyDown(KeyCode.Mouse1)) 
         {
             CreateBeacon();  
         }
+        
+    }
+
+    private void FixedUpdate()
+    {
+        fireballCastCooldownProgress = Mathf.Max(0f, fireballCastCooldownProgress - Time.fixedDeltaTime / fireballCastCooldownTime);
+    }
+
+    void TryCastFireball()
+    {
+        if (fireballCastCooldownProgress > 0f) return;
+        if (!manaPool.TryCast(0)) return;
+
+        fireballCastCooldownProgress = 1f;
+
+        LaunchFireball();
     }
 
     void LaunchFireball()
-    {
-        if (!manaPool.TryCast(0)) return;
-
+    { 
         Vector3 aimPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         aimPosition = new Vector3(aimPosition.x, 0, aimPosition.z);
         

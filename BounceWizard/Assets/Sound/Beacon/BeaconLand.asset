@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BeaconLand
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: df0a63d08b99be84ba12ba48de01c023, type: 3}
-  volume: 1
+  - {fileID: 8300000, guid: 2382eb13acc56de4d9be9727f0dab1b2, type: 3}
+  volume: 0.7
   spatialBlend: 0
-  pitchRange: {x: 0.9, y: 1.1}
+  pitchRange: {x: 0.95, y: 1.05}

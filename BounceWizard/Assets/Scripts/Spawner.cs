@@ -49,7 +49,12 @@ public class Spawner : MonoBehaviour
 
         if(TryFindPosition(out spawnedPosition))
         {
-            GameObject newPref = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+            GameObject newPref;
+#if UNITY_EDITOR
+            newPref = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+#else
+            newPref = Instantiate(prefab);
+#endif
             newPref.transform.position = spawnedPosition;
             newPref.transform.rotation = Quaternion.identity;
             newPref.transform.SetParent(parent);

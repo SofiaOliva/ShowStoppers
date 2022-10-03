@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832571d01de5eab4292545854eb1ac53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 20
+  throwTime: 0.5
   throwHeight: 5
   throwCurve:
     serializedVersion: 2

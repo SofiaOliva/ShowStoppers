@@ -5,8 +5,7 @@ using UnityEngine;
 public class BeaconSeed : MonoBehaviour
 {
     [Header("Throwing")]
-    [Tooltip("Units per second")]
-    public float throwSpeed = 5f;
+    public float throwTime = 5f;
     public float throwHeight = 5f;
     public AnimationCurve throwCurve;
     public SoundSO throwSound;
@@ -28,7 +27,7 @@ public class BeaconSeed : MonoBehaviour
     private IEnumerator Throwing(Vector3 startPos, Vector3 targetPos)
     {
         Vector3 offset = targetPos - startPos;
-        float airTime = offset.magnitude / throwSpeed;
+        float airTime = throwTime;
         float prog = 0f;
         float c;
 

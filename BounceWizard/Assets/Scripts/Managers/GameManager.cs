@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public EventSO_LevelResults levelResultsEvent;
     public EventSO_SceneTransition transitionEvent;
 
-    bool levelPlaying = false;
+    public static bool levelPlaying = false;
 
     private void OnEnable()
     {

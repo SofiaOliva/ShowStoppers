@@ -30,8 +30,10 @@ public class TransitionManager : MonoBehaviour
 
     IEnumerator Transitioning(SceneTransition transition)
     {
+        AsyncOperation async = SceneManager.LoadSceneAsync(transition.sceneName);
+        async.allowSceneActivation = false;
         yield return new WaitForSecondsRealtime(transition.transitionTime);
-        SceneManager.LoadScene(transition.sceneName);
+        async.allowSceneActivation = true;
     }
 
 }

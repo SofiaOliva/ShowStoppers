@@ -34,6 +34,7 @@ public class PauseManager : MonoBehaviour
 
     void TogglePause()
     {
+        if (!GameManager.levelPlaying) return;
         SetPause(!isPaused);
     }
 

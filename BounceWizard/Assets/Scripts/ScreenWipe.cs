@@ -40,7 +40,6 @@ public class ScreenWipe : MonoBehaviour
     {
         float prog = 0f;
         float startTime = Time.unscaledTime;
-        print("START TRANSITION for "+time+"s: "+Time.unscaledTime);
         yield return null;
         while (prog < 1f) {
             //print("prog: " + prog);
@@ -48,6 +47,5 @@ public class ScreenWipe : MonoBehaviour
             wipeMaterial.SetFloat(transIn ? "_TransIn" : "_TransOut", wipeCurve.Evaluate(prog));
             yield return null;
         }
-        print("END TRANSITION: " + (Time.unscaledTime - startTime));
     }
 }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5207906ac3314e46a9d5219e4484bcc, type: 3}
-  m_Name: Thunder
+  m_Name: BeaconThrow
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 0c4dd1750126f354ab0323f2da8a41f7, type: 3}
-  volume: 0.7
+  - {fileID: 8300000, guid: df0a63d08b99be84ba12ba48de01c023, type: 3}
+  volume: 1
   spatialBlend: 0
   pitchRange: {x: 0.9, y: 1.1}

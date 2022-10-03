@@ -11,17 +11,11 @@ public class HealBeacon : MonoBehaviour
     public float healTime = 3f;
 
     public GameObject blessedEffectPref;
+    public SoundSO spawnSound;
 
-    // Start is called once
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Do we update anything?
+        spawnSound?.Play(transform.position);
     }
 
     private void OnTriggerStay(Collider other)

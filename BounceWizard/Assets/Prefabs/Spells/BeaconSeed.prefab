@@ -71,6 +71,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  throwSound: {fileID: 11400000, guid: 1959111fa4bc76347959dc63c141208e, type: 2}
   beaconPref: {fileID: 3414369122091358203, guid: de4d4ed39232b2f4f8a29a471fd51398,
     type: 3}
 --- !u!1 &8518212654948271998
@@ -100,7 +101,7 @@ Transform:
   m_GameObject: {fileID: 8518212654948271998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.63, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1657688325155379261}

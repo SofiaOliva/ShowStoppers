@@ -9,9 +9,15 @@ public class BeaconSeed : MonoBehaviour
     public float throwSpeed = 5f;
     public float throwHeight = 5f;
     public AnimationCurve throwCurve;
+    public SoundSO throwSound;
 
     [Header("Spawning")]
     public GameObject beaconPref;
+
+    private void Awake()
+    {
+        throwSound.Play(transform.position);
+    }
 
 
     public void ThrowTo(Vector3 targetPos)

@@ -51,3 +51,4 @@ MonoBehaviour:
   allies: {fileID: 11400000, guid: ccc41355fcbbc244eab38332d9c821ec, type: 2}
   levelResultsEvent: {fileID: 11400000, guid: 9e01acf043df91d4eaf48443881bdfc9, type: 2}
   transitionEvent: {fileID: 11400000, guid: a19cfef3e0ddb374583ef4b6d2bb38ad, type: 2}
+  pauseEvent: {fileID: 11400000, guid: 0ea98100ed4fdd54d940d60f9db62881, type: 2}

@@ -49,6 +49,51 @@ MonoBehaviour:
     type: 3}
   thunderSound: {fileID: 11400000, guid: 940388e89acd8424bbe8338b8077d106, type: 2}
   shake: {fileID: 11400000, guid: 406b4e91e2553ad4b9b23762612dea72, type: 2}
+--- !u!1 &4784875041376843958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7346953882796359841}
+  - component: {fileID: 2668435787114401623}
+  m_Layer: 0
+  m_Name: PauseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7346953882796359841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4784875041376843958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353427055815497690}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2668435787114401623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4784875041376843958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de557d34a08812428a683fdeb3d8042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseEvent: {fileID: 11400000, guid: 0ea98100ed4fdd54d940d60f9db62881, type: 2}
 --- !u!1 &4877902177912859817
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,6 +128,7 @@ Transform:
   - {fileID: 8213240133789124891}
   - {fileID: 966685824}
   - {fileID: 8961347714282420132}
+  - {fileID: 7346953882796359841}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -174,6 +220,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 353427055815497690}
     m_Modifications:
+    - target: {fileID: 1956543693609411300, guid: e150fb70ad831d6428fda269cfd18f29,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50.981018
+      objectReference: {fileID: 0}
     - target: {fileID: 4344037879578509376, guid: e150fb70ad831d6428fda269cfd18f29,
         type: 3}
       propertyPath: manaPool

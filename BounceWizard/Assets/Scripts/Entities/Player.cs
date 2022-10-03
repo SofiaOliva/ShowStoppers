@@ -15,6 +15,7 @@ public class Player : Entity
     // Update is called once per frame
     void Update()
     {
+        if (PauseManager.isPaused) return;
         if (Input.GetKey(KeyCode.Mouse0))
         {
             TryCastFireball();

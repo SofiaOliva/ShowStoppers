@@ -39,11 +39,15 @@ public class ScreenWipe : MonoBehaviour
     IEnumerator Transitioning(bool transIn, float time)
     {
         float prog = 0f;
+        float startTime = Time.unscaledTime;
+        print("START TRANSITION for "+time+"s: "+Time.unscaledTime);
+        yield return null;
         while (prog < 1f) {
-            prog = Mathf.Min(1f, prog + Time.deltaTime/time);
+            //print("prog: " + prog);
+            prog = Mathf.Min(1f, prog + Time.unscaledDeltaTime/time);
             wipeMaterial.SetFloat(transIn ? "_TransIn" : "_TransOut", wipeCurve.Evaluate(prog));
             yield return null;
         }
-        
+        print("END TRANSITION: " + (Time.unscaledTime - startTime));
     }
 }

@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //enemies.EmptyEvent += OnAllEnemiesDead;
         player.EmptyEvent += OnPlayerDead;
     }
 
@@ -42,6 +41,7 @@ public class GameManager : MonoBehaviour
 
         levelPlaying = true;
     }
+
 
     public void InitializeLevel(Level level)
     {

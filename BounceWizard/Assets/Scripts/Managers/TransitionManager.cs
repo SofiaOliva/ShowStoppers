@@ -30,7 +30,7 @@ public class TransitionManager : MonoBehaviour
 
     IEnumerator Transitioning(SceneTransition transition)
     {
-        yield return new WaitForSeconds(transition.transitionTime);
+        yield return new WaitForSecondsRealtime(transition.transitionTime);
         SceneManager.LoadScene(transition.sceneName);
     }
 

@@ -12,11 +12,14 @@ public class UIManager : MonoBehaviour
     //public TMP_Text gameOverText;
     public EventSO_LevelResults resultsEvent;
     public EventSO_SceneTransition transitionEvent;
+    public EventSO_Bool pauseEvent;
+    public GameObject pauseScreen;
     private Canvas canvas;
 
     private void Awake()
     {
         canvas = GetComponentInChildren<Canvas>();
+        OnPause(false);
         //levelEndScreen.SetActive(false);
         //victoryScreen.SetActive(false);
         //gameOverScreen.SetActive(false);
@@ -25,11 +28,18 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         resultsEvent.Event += OnLevelResults;
+        pauseEvent.Event += OnPause;
     }
 
     private void OnDisable()
     {
         resultsEvent.Event -= OnLevelResults;
+        pauseEvent.Event -= OnPause;
+    }
+
+    public void OnPause(bool newPause)
+    {
+        pauseScreen.SetActive(newPause);
     }
 
     public void Retry()

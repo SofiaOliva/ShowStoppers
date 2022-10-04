@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmt: 1
-  healTime: 2
+  healTime: 1.25
   blessedEffectPref: {fileID: 2300917562290902528, guid: a1c10012ae04f9640a0ba23040ead410,
     type: 3}
   spawnSound: {fileID: 11400000, guid: 5e663f041b5982449a18fbefff7fb4c7, type: 2}

@@ -29,7 +29,7 @@ public class HitGiver : MonoBehaviour
         HitEntity(hurtbox.entity);
     }
 
-    public void HitEntity(Entity entity)
+    public virtual void HitEntity(Entity entity)
     {
         entity.TakeDamage(damage);
         active = false;

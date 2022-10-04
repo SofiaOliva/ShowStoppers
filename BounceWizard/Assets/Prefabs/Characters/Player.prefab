@@ -115,6 +115,7 @@ MonoBehaviour:
   fireballCastCooldownTime: 0.3
   beaconSeedPrefab: {fileID: 4060902532068330300, guid: 679dcd9075ebb1743bc9ea63ddc3173e,
     type: 3}
+  dashSpeedBoost: 1.5
   manaPool: {fileID: 8160137753944833089}
 --- !u!114 &6836028800345051221
 MonoBehaviour:
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   acceleration: 10
-  deacceleration: 10
+  deacceleration: 5
 --- !u!114 &6836028800345051560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +428,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6836028800345051220}
     m_Modifications:
+    - target: {fileID: 487105221909173154, guid: 07068e72edf0e8646bb76ef041bb2933,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 562073394857521312, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}
       propertyPath: m_Pivot.x
@@ -532,6 +538,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1578713488785777092, guid: 07068e72edf0e8646bb76ef041bb2933,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633527935467533476, guid: 07068e72edf0e8646bb76ef041bb2933,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6345319119640493999, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}
       propertyPath: m_FillAmount
@@ -541,6 +557,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353501937320016469, guid: 07068e72edf0e8646bb76ef041bb2933,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006663283406894628, guid: 07068e72edf0e8646bb76ef041bb2933,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0.039999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006663283601343678, guid: 07068e72edf0e8646bb76ef041bb2933,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0.6119992
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07068e72edf0e8646bb76ef041bb2933, type: 3}

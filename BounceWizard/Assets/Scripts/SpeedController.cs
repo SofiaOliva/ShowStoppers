@@ -6,12 +6,13 @@ using UnityEngine;
 public class SpeedController : MonoBehaviour
 {
     [SerializeField]
-    float speed = 5f;
+    float speed = 1f;
 
     [SerializeField]
     float acceleration = 1f;
     [SerializeField]
     float deacceleration = 1f;
+    float maxSpeed = 5f;
 
     Rigidbody rb;
 
@@ -42,5 +43,11 @@ public class SpeedController : MonoBehaviour
         {
             rb.velocity = currentDirection * Mathf.Max(currentSpeed - deacceleration*Time.fixedDeltaTime, speed);
         }
+
+        if (currentSpeed > maxSpeed)
+        {
+            rb.velocity = currentDirection * maxSpeed;
+        }
+            
     }
 }

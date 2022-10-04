@@ -9,9 +9,16 @@ public class Player : Entity
     public float fireballCastCooldownTime = 0.1f;
     private float fireballCastCooldownProgress = 0f;
     public GameObject beaconSeedPrefab;
+    public float dashSpeedBoost = 1.5f;
+    
+    Rigidbody rb;
 
     public ManaPool manaPool;
 
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +30,10 @@ public class Player : Entity
         if (Input.GetKeyDown(KeyCode.Mouse1)) 
         {
             CreateBeacon();  
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            startDashSpell();
         }
         
     }
@@ -72,7 +83,20 @@ public class Player : Entity
         BeaconSeed beaconSeed = Instantiate(beaconSeedPrefab, transform.position, Quaternion.identity).GetComponent<BeaconSeed>();
         beaconSeed.ThrowTo(worldPosition);
     }
+    void startDashSpell()
+    {
+        Vector3 aimPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        aimPosition = new Vector3(aimPosition.x, 0, aimPosition.z);
 
+        Vector3 aimDirection = (aimPosition - transform.position).normalized;
+        Vector3 spawnPosition = transform.position + aimDirection;
+        if (InWall(spawnPosition)) return;
+
+        float currentSpeed = rb.velocity.magnitude;
+        rb.velocity = currentSpeed * aimDirection * dashSpeedBoost;
+
+        transform.position = new Vector3(spawnPosition.x, 0, spawnPosition.z);
+    }
     bool InWall(Vector3 pos)
     {
         Collider[] walls = Physics.OverlapSphere(pos, 0.25f, LayerMask.GetMask("Wall"));

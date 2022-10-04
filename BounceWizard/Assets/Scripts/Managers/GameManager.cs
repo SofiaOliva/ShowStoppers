@@ -77,20 +77,21 @@ public class GameManager : MonoBehaviour
         if (!levelPlaying) return;
         EndLevel();
         gameData.WinLevel();
-        float transitionTime = 1f;
         if (gameData.HasFinished())
         {
-            print("You beat all the levels!");
-            gameData.Reset();
-            transitionTime = 2f;
-            levelResultsEvent.Trigger(new LevelResults(true, gameData));
-            //transitionEvent.Trigger(new SceneTransition("Menu", 2f));
+            WinGame();
         }
         else
         {
-            transitionEvent.Trigger(new SceneTransition(SceneManager.GetActiveScene().name, transitionTime));
+            transitionEvent.Trigger(new SceneTransition(SceneManager.GetActiveScene().name, 1f));
         }
-        
+    }
+
+    void WinGame()
+    {
+        print("You beat all the levels!");
+        gameData.Reset();
+        levelResultsEvent.Trigger(new LevelResults(true, gameData));
     }
 
     void Lose()

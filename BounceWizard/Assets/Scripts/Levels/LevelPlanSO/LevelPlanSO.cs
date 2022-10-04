@@ -14,5 +14,6 @@ public abstract class LevelPlanSO : ScriptableObject
 
     public abstract bool IsValidLevel(int number);
 
+    public virtual void WinLevel(int index) { }
     public abstract void EndLevel(GameDataSO data);
 }

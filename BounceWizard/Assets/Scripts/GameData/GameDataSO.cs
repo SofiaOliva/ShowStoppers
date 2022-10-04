@@ -26,6 +26,7 @@ public class GameDataSO : ScriptableObject
 
     public void WinLevel()
     {
+        levelPlan.WinLevel(Level);
         ++Level;
     }
 

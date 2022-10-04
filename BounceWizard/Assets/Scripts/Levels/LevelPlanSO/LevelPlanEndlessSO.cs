@@ -9,8 +9,8 @@ public class LevelPlanEndlessSO : LevelPlanSO
     public override Level GetLevel(int number)
     {
         Level newLevel = new Level();
-        newLevel.allyCount = (number+1) / 3 + 1;
-        newLevel.enemyCount = number+1;
+        newLevel.allyCount = (number + 1) / 3 + 1;
+        newLevel.enemyCount = number + 1;
         newLevel.mapList = mapList;
         newLevel.randomSeed = true;
 
@@ -21,7 +21,14 @@ public class LevelPlanEndlessSO : LevelPlanSO
     {
         return true;
     }
-
+    public override void WinLevel(int index)
+    {
+        string highscore = "highscore";
+        if (!PlayerPrefs.HasKey(highscore) || index + 1 > PlayerPrefs.GetInt(highscore))
+        {
+            PlayerPrefs.SetInt(highscore, index + 1);
+        }
+    }
     public override void EndLevel(GameDataSO data)
     {
         data.Reset();

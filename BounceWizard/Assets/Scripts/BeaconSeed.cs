@@ -39,5 +39,6 @@ public class BeaconSeed : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         Instantiate(beaconPref, targetPos, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

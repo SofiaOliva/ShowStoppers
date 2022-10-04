@@ -27,27 +27,28 @@ public class HealBeacon : MonoBehaviour
 
     }
 
-      public void Explode(Collider other){
+    public void Explode(){
         // Explodes the beacon
-        Instantiate(beaconExplodeEffect, other.transform.position, Quaternion.identity);
-        Destroy(other.gameObject);
+        Instantiate(beaconExplodeEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
     private void OnTriggerStay(Collider other)
     {
         HurtBox hurtbox = other.GetComponent<HurtBox>();
-        Fireball fireballScript = other.attachedRigidbody.GetComponent<Fireball>();
-
-        if (!hurtbox) {
-            if(fireballScript != null)
-            Explode(other);
-            else
-                return;
-        return;
+        Rigidbody otherRigidbody = other.attachedRigidbody;
+        
+        if (hurtbox)
+        {
+            Heal(hurtbox.entity);
         }
-
-        Heal(hurtbox.entity);
+        else if (otherRigidbody)
+        {
+            Fireball fireballScript = otherRigidbody.GetComponent<Fireball>();
+            if (!fireballScript) return;
+            Destroy(fireballScript.gameObject);
+            Explode();
+        }
     }
 
     void Heal(Entity entity){

@@ -12,7 +12,7 @@ public class SpeedController : MonoBehaviour
     float acceleration = 1f;
     [SerializeField]
     float deacceleration = 1f;
-    float maxSpeed = 5f;
+    [SerializeField] float maxSpeed = 5f;
 
     Rigidbody rb;
 
@@ -35,19 +35,20 @@ public class SpeedController : MonoBehaviour
         float currentSpeed = rb.velocity.magnitude;
         Vector3 currentDirection = rb.velocity.normalized;
 
-        if(currentSpeed < speed)
+        if (currentSpeed > maxSpeed)
         {
-            rb.velocity = currentDirection * Mathf.Max(currentSpeed + acceleration*Time.fixedDeltaTime, speed);
+            rb.velocity = currentDirection * maxSpeed;
+        }
+        else if(currentSpeed < speed)
+        {
+            rb.velocity = currentDirection * Mathf.Min(currentSpeed + acceleration*Time.fixedDeltaTime, speed);
         }
         else
         {
             rb.velocity = currentDirection * Mathf.Max(currentSpeed - deacceleration*Time.fixedDeltaTime, speed);
         }
 
-        if (currentSpeed > maxSpeed)
-        {
-            rb.velocity = currentDirection * maxSpeed;
-        }
+        
             
     }
 }

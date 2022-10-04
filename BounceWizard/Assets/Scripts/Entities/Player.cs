@@ -9,11 +9,12 @@ public class Player : Entity
     public float fireballCastCooldownTime = 0.1f;
     private float fireballCastCooldownProgress = 0f;
     public GameObject beaconSeedPrefab;
-    public float dashSpeedBoost = 1.5f;
+    public float dashSpeed = 1.5f;
     
     Rigidbody rb;
 
     public ManaPool manaPool;
+    public Animator animator;
 
     void Awake()
     {
@@ -29,18 +30,23 @@ public class Player : Entity
         }
         if (Input.GetKeyDown(KeyCode.Mouse1)) 
         {
-            CreateBeacon();  
+            TryThrowBeacon();  
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             startDashSpell();
         }
-        
     }
 
     private void FixedUpdate()
     {
         fireballCastCooldownProgress = Mathf.Max(0f, fireballCastCooldownProgress - Time.fixedDeltaTime / fireballCastCooldownTime);
+    }
+
+    protected override void OnHit()
+    {
+        base.OnHit();
+        animator.SetTrigger("hit");
     }
 
     void TryCastFireball()
@@ -54,7 +60,8 @@ public class Player : Entity
     }
 
     void LaunchFireball()
-    { 
+    {
+        animator.SetTrigger("shootFire");
         Vector3 aimPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         aimPosition = new Vector3(aimPosition.x, 0, aimPosition.z);
         
@@ -71,7 +78,7 @@ public class Player : Entity
         }
     }
 
-    void CreateBeacon()
+    void TryThrowBeacon()
     {
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPosition = new Vector3(worldPosition.x, 0, worldPosition.z);
@@ -80,6 +87,11 @@ public class Player : Entity
 
         if (!manaPool.TryCast(1)) return;
 
+        ThrowBeacon(worldPosition);
+    }
+    void ThrowBeacon(Vector3 worldPosition)
+    {
+        animator.SetTrigger("shootBeacon");
         BeaconSeed beaconSeed = Instantiate(beaconSeedPrefab, transform.position, Quaternion.identity).GetComponent<BeaconSeed>();
         beaconSeed.ThrowTo(worldPosition);
     }
@@ -93,8 +105,7 @@ public class Player : Entity
         if (InWall(spawnPosition)) return;
         if (!manaPool.TryCast(2)) return;
 
-        float currentSpeed = rb.velocity.magnitude;
-        rb.velocity = currentSpeed * aimDirection * dashSpeedBoost;
+        rb.velocity = aimDirection * dashSpeed;
 
         transform.position = new Vector3(spawnPosition.x, 0, spawnPosition.z);
     }

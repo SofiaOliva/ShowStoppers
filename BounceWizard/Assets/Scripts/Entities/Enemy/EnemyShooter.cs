@@ -15,6 +15,7 @@ public class EnemyShooter : MonoBehaviour
     [Tooltip("When no good throw is calculated, how long to wait before trying to throw again")]
     public Vector2 retryTimeRange = new Vector2(0.8f,1.5f);
 
+    public Animator animator;
     LayerMask targetMask;
     Rigidbody rb;
 
@@ -70,6 +71,7 @@ public class EnemyShooter : MonoBehaviour
     //Keep the projectile on top of the shooter until the cast time finishes
     IEnumerator Casting(Icicle projectile, Vector3 velocity)
     {
+        animator.SetBool("charging", true);
         projectile.transform.rotation = Quaternion.LookRotation(velocity, Vector3.up);
         float prog = 0f;
         while(prog < 1f)
@@ -80,5 +82,6 @@ public class EnemyShooter : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         projectile.Send(velocity);
+        animator.SetBool("charging", false);
     }
 }

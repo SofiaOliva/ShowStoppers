@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff3ffca8e5c3954a9fa508fbf2818b2, type: 3}
   m_Name: ManaStream_Fall
   m_EditorClassIdentifier: 
-  maxMana: 5
-  mana: 0.33333328
-  manaTime: 1.5
-  overcharge: 0
+  maxMana: 2
+  mana: 2
+  manaTime: 3.5
+  overcharge: 0.4466687
   overchargeTime: 3

@@ -39,8 +39,13 @@ public class Entity : MonoBehaviour
     {
         if (health < 1) return;
         ChangeHealth(-damage);
-        hitShake.DoShake();
+        OnHit();
         if (health < 1) Die();
+    }
+
+    protected virtual void OnHit()
+    {
+        hitShake.DoShake();
     }
 
     public void ChangeHealth(float change)

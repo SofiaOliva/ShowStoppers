@@ -296,6 +296,8 @@ MonoBehaviour:
     Variable: {fileID: 0}
   hitShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
   dieSound: {fileID: 11400000, guid: 71b081205ec3a904a913604c8d298211, type: 2}
+  blessed: 0
+  animator: {fileID: 1227369430324257307}
 --- !u!114 &6235339681064458052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +355,7 @@ MonoBehaviour:
   projectileSpeed: 8
   cooldownRange: {x: 4, y: 10}
   retryTimeRange: {x: 0.8, y: 1.5}
+  animator: {fileID: 1227369430324257307}
 --- !u!114 &5819101404471019679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceT: {fileID: 6235339680470187876}
   bounceTime: 0.2
+  bounceMagnitude: 1
   bounceCurve:
     serializedVersion: 2
     m_Curve:
@@ -573,6 +577,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6cdf124dcff50b748a6749bc4cb11c05, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be1ff129297ce6944a11871cac044411, type: 3}
+--- !u!95 &1227369430324257307 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: be1ff129297ce6944a11871cac044411,
+    type: 3}
+  m_PrefabInstance: {fileID: 4639526028877111178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5181480616211478625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be1ff129297ce6944a11871cac044411,
@@ -616,6 +626,11 @@ PrefabInstance:
       propertyPath: entity
       value: 
       objectReference: {fileID: 6235339681064458049}
+    - target: {fileID: 8360629412180439954, guid: db5db29d8ae07f74c8223aa2f9856f5c,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8545816555406484842, guid: db5db29d8ae07f74c8223aa2f9856f5c,
         type: 3}
       propertyPath: m_RootOrder

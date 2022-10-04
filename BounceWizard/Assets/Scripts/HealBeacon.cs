@@ -12,20 +12,43 @@ public class HealBeacon : MonoBehaviour
 
     public GameObject blessedEffectPref;
     public SoundSO spawnSound;
+    public GameObject beaconExplodeEffect;
+
 
     void Start()
     {
         spawnSound?.Play(transform.position);
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+      public void Explode(Collider other){
+        // Explodes the beacon
+        Instantiate(beaconExplodeEffect, other.transform.position, Quaternion.identity);
+        Destroy(other.gameObject);
+        Destroy(gameObject);
     }
 
     private void OnTriggerStay(Collider other)
     {
         HurtBox hurtbox = other.GetComponent<HurtBox>();
-        if (!hurtbox) return;
+        Fireball fireballScript = other.attachedRigidbody.GetComponent<Fireball>();
+
+        if (!hurtbox) {
+            if(fireballScript != null)
+            Explode(other);
+            else
+                return;
+        return;
+        }
 
         Heal(hurtbox.entity);
     }
-
 
     void Heal(Entity entity){
         if (!entity.blessed)

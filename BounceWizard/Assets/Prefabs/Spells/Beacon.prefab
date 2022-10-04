@@ -68,6 +68,8 @@ MonoBehaviour:
   blessedEffectPref: {fileID: 2300917562290902528, guid: a1c10012ae04f9640a0ba23040ead410,
     type: 3}
   spawnSound: {fileID: 11400000, guid: 5e663f041b5982449a18fbefff7fb4c7, type: 2}
+  beaconExplodeEffect: {fileID: 2443106124929233945, guid: 1372b6334a0fff64990e41543766ee31,
+    type: 3}
 --- !u!1 &3856419048174385581
 GameObject:
   m_ObjectHideFlags: 0

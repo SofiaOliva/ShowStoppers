@@ -47,6 +47,7 @@ MonoBehaviour:
   manaStreams:
   - {fileID: 11400000, guid: 76ff1095ed4206045bdaaed2fe2aa654, type: 2}
   - {fileID: 11400000, guid: a9ce6edf4d70f234d829c7521374dede, type: 2}
+  - {fileID: 11400000, guid: 548c7b2b7db846046b0eef30221bcec6, type: 2}
 --- !u!1 &6836028800345051223
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,15 +539,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1578713488785777092, guid: 07068e72edf0e8646bb76ef041bb2933,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5633527935467533476, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}
       propertyPath: m_FillAmount
-      value: 0
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 6345319119640493999, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}
@@ -566,12 +562,12 @@ PrefabInstance:
     - target: {fileID: 8006663283406894628, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}
       propertyPath: m_FillAmount
-      value: 0.039999995
+      value: 0.98666596
       objectReference: {fileID: 0}
     - target: {fileID: 8006663283601343678, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}
       propertyPath: m_FillAmount
-      value: 0.6119992
+      value: 0.49600065
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07068e72edf0e8646bb76ef041bb2933, type: 3}

@@ -91,6 +91,7 @@ public class Player : Entity
         Vector3 aimDirection = (aimPosition - transform.position).normalized;
         Vector3 spawnPosition = transform.position + aimDirection;
         if (InWall(spawnPosition)) return;
+        if (!manaPool.TryCast(2)) return;
 
         float currentSpeed = rb.velocity.magnitude;
         rb.velocity = currentSpeed * aimDirection * dashSpeedBoost;

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d145cbe82c21240b62179afc3a8aac, type: 3}
+  m_Name: AutumnConvo
+  m_EditorClassIdentifier: 
+  defaultSpeaker: {fileID: 11400000, guid: 9b1ca2abb9fdad44f8d69f0cbf81264f, type: 2}
+  textAsset: {fileID: 4900000, guid: b6f6590fb9cd8434aaad58b578efb73a, type: 3}
+  lines:
+  - speaker: {fileID: 0}
+    text: "Those two pesky gods, ruining what's to come next!\r"
+  - speaker: {fileID: 0}
+    text: "Behold! My power, the autumn god's mighty wind dash! \r"
+  - speaker: {fileID: 0}
+    text: "Use this to protect your allies before they are knocked down.\r"
+  nextConvo: {fileID: 0}

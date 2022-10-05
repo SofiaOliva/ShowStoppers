@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d145cbe82c21240b62179afc3a8aac, type: 3}
+  m_Name: WinterConvo
+  m_EditorClassIdentifier: 
+  defaultSpeaker: {fileID: 11400000, guid: fc7e3d37786ba724b96df7f69a4a217c, type: 2}
+  textAsset: {fileID: 4900000, guid: 10e5e59d270dc094589838734aab453d, type: 3}
+  lines:
+  - speaker: {fileID: 0}
+    text: "You have come to defeat me, O wizard?\r"
+  - speaker: {fileID: 0}
+    text: "Hmph. \r"
+  - speaker: {fileID: 0}
+    text: "If you beat the last of my thralls, I will relinquish my grasp on the
+      seasonal cycle.\r"
+  nextConvo: {fileID: 0}

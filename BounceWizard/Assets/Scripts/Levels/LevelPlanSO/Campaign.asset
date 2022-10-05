@@ -16,4 +16,5 @@ MonoBehaviour:
     type: 3}
   winScreen: {fileID: 6479784239750503566, guid: 37f3196767e575f4d904d6fd7257108e,
     type: 3}
+  transitionEvent: {fileID: 11400000, guid: a19cfef3e0ddb374583ef4b6d2bb38ad, type: 2}
   levels: {fileID: 11400000, guid: 8429dee0941c04e4c99a30582e2059cb, type: 2}

@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     void OnAllEnemiesDead()
     {
-        Win();
+        WinLevel();
     }
 
     void OnPlayerDead()
@@ -72,19 +72,14 @@ public class GameManager : MonoBehaviour
         levelPlaying = false;
     }
 
-    void Win()
+    void WinLevel()
     {
         if (!levelPlaying) return;
         EndLevel();
+
         gameData.WinLevel();
-        if (gameData.HasFinished())
-        {
-            WinGame();
-        }
-        else
-        {
-            transitionEvent.Trigger(new SceneTransition(SceneManager.GetActiveScene().name, 1f));
-        }
+        
+        //WinGame();
     }
 
     void WinGame()

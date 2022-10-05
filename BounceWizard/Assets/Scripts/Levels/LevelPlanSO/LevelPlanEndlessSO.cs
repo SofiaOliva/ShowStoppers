@@ -28,6 +28,7 @@ public class LevelPlanEndlessSO : LevelPlanSO
         {
             PlayerPrefs.SetInt(highscore, index + 1);
         }
+        base.WinLevel(index);
     }
     public override void EndLevel(GameDataSO data)
     {

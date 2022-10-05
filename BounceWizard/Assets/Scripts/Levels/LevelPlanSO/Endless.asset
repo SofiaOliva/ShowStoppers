@@ -16,4 +16,5 @@ MonoBehaviour:
     type: 3}
   winScreen: {fileID: 6479784239750503566, guid: 37f3196767e575f4d904d6fd7257108e,
     type: 3}
+  transitionEvent: {fileID: 11400000, guid: a19cfef3e0ddb374583ef4b6d2bb38ad, type: 2}
   mapList: {fileID: 11400000, guid: e6b579d36dca41941a8b79039c86a7f5, type: 2}

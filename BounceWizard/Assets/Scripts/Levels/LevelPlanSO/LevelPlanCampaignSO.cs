@@ -17,6 +17,11 @@ public class LevelPlanCampaignSO : LevelPlanSO
         return number < levels.levels.Length;
     }
 
+    public override void WinLevel(int index)
+    {
+        GoScene("Dialogue");
+    }
+
     public override void EndLevel(GameDataSO data)
     {
         

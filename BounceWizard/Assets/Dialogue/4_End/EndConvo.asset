@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d145cbe82c21240b62179afc3a8aac, type: 3}
+  m_Name: EndConvo
+  m_EditorClassIdentifier: 
+  defaultSpeaker: {fileID: 11400000, guid: ffcf2231f5294494386bb4f2ed537c2b, type: 2}
+  textAsset: {fileID: 4900000, guid: 1a210edb165d6494ab6a676d7cb1d8b3, type: 3}
+  lines:
+  - speaker: {fileID: 0}
+    text: "And so, the cycle continues onward...\r"
+  - speaker: {fileID: 0}
+    text: "The wintertide recedes, time marches forward.\r"
+  - speaker: {fileID: 0}
+    text: "You have been our ally, great Wizard.\r"
+  - speaker: {fileID: 0}
+    text: "You are a hero.\r"
+  - speaker: {fileID: 0}
+    text: "Please, for the love of all the seasons...\r"
+  - speaker: {fileID: 0}
+    text: "For time to march forward...\r"
+  - speaker: {fileID: 0}
+    text: "For the cycle to begin anew...\r"
+  - speaker: {fileID: 0}
+    text: "Don't stop.\r"
+  nextConvo: {fileID: 0}

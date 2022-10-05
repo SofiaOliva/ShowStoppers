@@ -47,7 +47,7 @@ public class LevelGenerator : MonoBehaviour
     {
         DestroyChildren(mapParent);
         GameObject map;
-        GameObject mapPrefab = level.mapList.GetRandomMap();
+        GameObject mapPrefab = level.GetMap();
 #if UNITY_EDITOR
         map = (GameObject)PrefabUtility.InstantiatePrefab(mapPrefab);
 #else

@@ -9,10 +9,15 @@ public class MenuManager : MonoBehaviour
     public LevelPlanSO endlessPlan;
     public EventSO_SceneTransition transitionEvent;
 
+    private void Start()
+    {
+        gameData.Reset();
+    }
+
     public void PlayCampaign()
     {
         gameData.levelPlan = campaignPlan;
-        Play();
+        Play("Dialogue");
     }
 
     public void PlayEndless()
@@ -21,9 +26,9 @@ public class MenuManager : MonoBehaviour
         Play();
     }
 
-    void Play()
+    void Play(string sceneName = "Game")
     {
         gameData.Level = 0;
-        transitionEvent.Trigger(new SceneTransition("Game", 1f));
+        transitionEvent.Trigger(new SceneTransition(sceneName, 1f));
     }
 }

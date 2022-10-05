@@ -23,9 +23,4 @@ public class LevelPlanCampaignSO : LevelPlanSO
         manaPool.UnlockStreams(index + 1);
         GoScene("Dialogue");
     }
-
-    public override void EndLevel(GameDataSO data)
-    {
-        
-    }
 }

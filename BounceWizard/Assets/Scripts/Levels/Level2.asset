@@ -15,7 +15,7 @@ MonoBehaviour:
   level:
     seed: 5
     randomSeed: 0
-    enemyCount: 3
+    enemyCount: 2
     allyCount: 2
     specifiedMap: {fileID: 8812989509972071080, guid: b014cef175e99b243adefaef2929c463,
       type: 3}

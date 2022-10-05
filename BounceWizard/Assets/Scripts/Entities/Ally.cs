@@ -9,6 +9,5 @@ public class Ally : Entity
     {
         base.OnHit();
         animator.SetTrigger("hit");
-        print("Ally hit");
     }
 }

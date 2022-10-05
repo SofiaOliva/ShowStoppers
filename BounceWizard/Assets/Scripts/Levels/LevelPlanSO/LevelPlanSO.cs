@@ -24,5 +24,5 @@ public abstract class LevelPlanSO : ScriptableObject
     {
         transitionEvent.Trigger(new SceneTransition(sceneName, 1f));
     }
-    public abstract void EndLevel(GameDataSO data);
+    public virtual void EndLevel(GameDataSO data) { }
 }

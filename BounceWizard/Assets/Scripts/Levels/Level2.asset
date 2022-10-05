@@ -17,4 +17,5 @@ MonoBehaviour:
     randomSeed: 0
     enemyCount: 3
     allyCount: 2
-    mapList: {fileID: 11400000, guid: e6b579d36dca41941a8b79039c86a7f5, type: 2}
+    specifiedMap: {fileID: 0}
+    randomMapList: {fileID: 11400000, guid: e6b579d36dca41941a8b79039c86a7f5, type: 2}

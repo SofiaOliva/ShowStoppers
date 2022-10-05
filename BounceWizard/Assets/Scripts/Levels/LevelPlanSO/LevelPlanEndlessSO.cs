@@ -11,7 +11,7 @@ public class LevelPlanEndlessSO : LevelPlanSO
         Level newLevel = new Level();
         newLevel.allyCount = (number + 1) / 3 + 1;
         newLevel.enemyCount = number + 1;
-        newLevel.mapList = mapList;
+        newLevel.randomMapList = mapList;
         newLevel.randomSeed = true;
 
         return newLevel;

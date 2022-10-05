@@ -12,7 +12,8 @@ public class Level
     public int enemyCount = 1;
     public int allyCount = 1;
 
-    public MapListSO mapList;
+    public GameObject specifiedMap;
+    public MapListSO randomMapList;
 
     public int Seed
     {
@@ -28,5 +29,17 @@ public class Level
             }
         }
 
+    }
+
+    public GameObject GetMap()
+    {
+        if (specifiedMap)
+        {
+            return specifiedMap;
+        }
+        else
+        {
+            return randomMapList.GetRandomMap();
+        }
     }
 }

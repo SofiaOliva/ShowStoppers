@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 119dda517395bff459225e6df8a7c9dd, type: 3}
-  m_Name: WinterGod
+  m_Name: AllGods
   m_EditorClassIdentifier: 
-  speakerName: God of Winter
+  speakerName: All Gods
   font: {fileID: 0}
-  fontColor: {r: 0.78867924, g: 1, b: 0.9935343, a: 1}
+  fontColor: {r: 1, g: 1, b: 1, a: 1}

@@ -1,4 +1,8 @@
-Greetings, mortal. I am the god of summer, of its heat, its bite, its ferocity.
+Greetings, mortal. 
+I am the god of summer, of its heat, its bite, its ferocity.
 The fire inside you glows brightly, I can tell. 
-Channel my blessing [with left-click] to cast a fireball forward.
-Don't stop using my blessing, or I will take it as a sign of disrespect and smite one of your allies.
+The God of Winter has stopped the realm's seasonal cycle, cursing us with everlasting frost.
+Enter the frigid caverns below and seek them out.
+Channel my blessing [with LEFT-CLICK] to cast a fireball forward.
+If you allow your mana to overflow, I will take it as a sign of disrespect and smite one of your allies.
+Use my blessing, and do not stop.

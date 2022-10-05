@@ -1,3 +1,6 @@
-Greetings, dear Wizard. I am the god of spring, of rebirth, and life anew.
-I offer a fountain of youth to you and your allies [right-click anywhere on the map].
-Make sure you use my blessing, or you and your allies may meet an untimely demise. 
+Greetings, dear Wizard. 
+I am the god of spring, of rebirth, and life anew.
+I offer seeds of life to you and your allies [RIGHT-CLICK anywhere on the map].
+Enter their holy aura to be instantly healed. Linger within them to regenerate further.
+Take caution: My blessing applies not just to your and your allies, but to the constructs of ice as well.
+Continue to honor my blessing, or you and your allies may meet an untimely demise. 

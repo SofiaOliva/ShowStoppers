@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d145cbe82c21240b62179afc3a8aac, type: 3}
   m_Name: EndConvo
   m_EditorClassIdentifier: 
-  defaultSpeaker: {fileID: 11400000, guid: ffcf2231f5294494386bb4f2ed537c2b, type: 2}
+  defaultSpeaker: {fileID: 11400000, guid: 026323e6283723546ac640e9a743f526, type: 2}
   textAsset: {fileID: 4900000, guid: 1a210edb165d6494ab6a676d7cb1d8b3, type: 3}
   lines:
   - speaker: {fileID: 0}

@@ -41,6 +41,10 @@ public class ScreenWipe : MonoBehaviour
         float prog = 0f;
         float startTime = Time.unscaledTime;
         yield return null;
+        if (transIn)
+        {
+            yield return new WaitForSecondsRealtime(0.2f);
+        }
         while (prog < 1f) {
             //print("prog: " + prog);
             prog = Mathf.Min(1f, prog + Time.unscaledDeltaTime/time);

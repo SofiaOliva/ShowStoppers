@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
     {
         nameText.text = convo.defaultSpeaker.speakerName;
         contentText.text = convo.lines[line].text;
+        nameText.color = convo.defaultSpeaker.fontColor;
     }
 
     private IEnumerator PlayingConversation(ConversationSO convo)

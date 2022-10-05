@@ -15,3 +15,5 @@ MonoBehaviour:
   maps:
   - {fileID: 3545349506240432256, guid: 73b79e0553e1dd24b8c5e25acb9d89e6, type: 3}
   - {fileID: 8812989509972071080, guid: b014cef175e99b243adefaef2929c463, type: 3}
+  - {fileID: 820124886846710921, guid: 132d705f54b638145bacf2b92c734d6f, type: 3}
+  - {fileID: 9032786629368078775, guid: 3580ead4595cb7544b3568115fb00009, type: 3}

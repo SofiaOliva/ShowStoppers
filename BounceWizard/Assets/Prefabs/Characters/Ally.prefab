@@ -297,6 +297,7 @@ MonoBehaviour:
   speed: 3
   acceleration: 10
   deacceleration: 10
+  maxSpeed: 5
 --- !u!114 &6235339681064458052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +398,7 @@ MonoBehaviour:
   hitShake: {fileID: 11400000, guid: ecaeb29076f2eda478d104db38ce8b3e, type: 2}
   dieSound: {fileID: 11400000, guid: 31f2cfea6ba443d40a20fdca2a2309ed, type: 2}
   blessed: 0
+  animator: {fileID: 3854913549395309450}
 --- !u!114 &2830457905643868882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,8 +601,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: ally_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 298cb1c1f0584a2499382e8aa645764a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5f52d9bc4c4e6a943bd9cf5b0ad59e1e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 298cb1c1f0584a2499382e8aa645764a, type: 3}
+--- !u!95 &3854913549395309450 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 298cb1c1f0584a2499382e8aa645764a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7211937401056038427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7178539509182753264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 298cb1c1f0584a2499382e8aa645764a,

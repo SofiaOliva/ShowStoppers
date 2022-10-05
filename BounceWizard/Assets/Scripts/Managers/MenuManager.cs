@@ -17,12 +17,14 @@ public class MenuManager : MonoBehaviour
     public void PlayCampaign()
     {
         gameData.levelPlan = campaignPlan;
+        gameData.manaPool.UnlockStreams(0);
         Play("Dialogue");
     }
 
     public void PlayEndless()
     {
         gameData.levelPlan = endlessPlan;
+        gameData.manaPool.UnlockStreams(2);
         Play();
     }
 

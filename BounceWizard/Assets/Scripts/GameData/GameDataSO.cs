@@ -11,6 +11,8 @@ public class GameDataSO : ScriptableObject
     public bool DEBUG_freezeLevel = false;
     public LevelPlanSO levelPlan;
 
+    public ManaPoolSO manaPool;
+
     public int Level
     {
         get

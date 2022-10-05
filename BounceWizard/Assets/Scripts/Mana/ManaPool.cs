@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class ManaPool : MonoBehaviour
 {
-    public ManaStreamSO[] manaStreams;
+    public ManaPoolSO manaPool;
 
     private void Start()
     {
-        foreach (ManaStreamSO stream in manaStreams)
+        foreach (ManaStreamSO stream in manaPool.allStreams)
         {
-            stream.Start();
+            stream.Reset();
         }
     }
 
     private void FixedUpdate()
     {
-        foreach(ManaStreamSO stream in manaStreams)
+        foreach(ManaStreamSO stream in manaPool.streams)
         {
             stream.Fill(Time.fixedDeltaTime);
         }
@@ -24,6 +24,6 @@ public class ManaPool : MonoBehaviour
 
     public bool TryCast(int index)
     {
-        return manaStreams[index].TryCast();
+        return manaPool.streams[index].TryCast();
     }
 }

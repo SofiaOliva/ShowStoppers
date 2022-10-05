@@ -48,6 +48,7 @@ MonoBehaviour:
   lightningEffect: {fileID: 4684276327340518807, guid: 8071ef7572b082c45a9c4c09fdc5a2d4,
     type: 3}
   thunderSound: {fileID: 11400000, guid: 940388e89acd8424bbe8338b8077d106, type: 2}
+  manaPool: {fileID: 11400000, guid: a6a75f36cb690b946a49a325605751e9, type: 2}
   shake: {fileID: 11400000, guid: 406b4e91e2553ad4b9b23762612dea72, type: 2}
 --- !u!1 &4784875041376843958
 GameObject:

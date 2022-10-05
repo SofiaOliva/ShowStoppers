@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelPlanCampaignSO : LevelPlanSO
 {
     public LevelListSO levels;
+    public ManaPoolSO manaPool;
 
     public override Level GetLevel(int number)
     {
@@ -19,6 +20,7 @@ public class LevelPlanCampaignSO : LevelPlanSO
 
     public override void WinLevel(int index)
     {
+        manaPool.UnlockStreams(index + 1);
         GoScene("Dialogue");
     }
 

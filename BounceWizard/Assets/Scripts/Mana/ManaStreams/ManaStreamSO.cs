@@ -47,10 +47,17 @@ public class ManaStreamSO : ScriptableObject
         }
     }
 
-    public void Start()
+    void Start()
+    {
+        Reset();
+    }
+
+    public void Reset()
     {
         Mana = 0f;
         Overcharge = 0f;
+        ManaChange?.Invoke(Mana);
+        OverchargeChange?.Invoke(Overcharge);
     }
 
     private void OnValidate()

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   DEBUG_freezeLevel: 0
-  levelPlan: {fileID: 11400000, guid: cff23a919fe3ea7448d7a75760f7e2be, type: 2}
+  levelPlan: {fileID: 11400000, guid: 6d525ee23e7d45746a8d442300edde47, type: 2}
+  manaPool: {fileID: 11400000, guid: a6a75f36cb690b946a49a325605751e9, type: 2}

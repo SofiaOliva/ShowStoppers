@@ -44,10 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38eb6ba217f5a9b4fa87d48acadbc44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaStreams:
-  - {fileID: 11400000, guid: 76ff1095ed4206045bdaaed2fe2aa654, type: 2}
-  - {fileID: 11400000, guid: a9ce6edf4d70f234d829c7521374dede, type: 2}
-  - {fileID: 11400000, guid: 548c7b2b7db846046b0eef30221bcec6, type: 2}
+  manaPool: {fileID: 11400000, guid: a6a75f36cb690b946a49a325605751e9, type: 2}
 --- !u!1 &6836028800345051223
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,11 +584,6 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5633527935467533476, guid: 07068e72edf0e8646bb76ef041bb2933,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6345319119640493999, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}
       propertyPath: m_FillAmount
@@ -606,11 +598,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FillAmount
       value: 0.14666602
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006663283406894628, guid: 07068e72edf0e8646bb76ef041bb2933,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8006663283601343678, guid: 07068e72edf0e8646bb76ef041bb2933,
         type: 3}

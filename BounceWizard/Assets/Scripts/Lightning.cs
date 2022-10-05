@@ -8,7 +8,7 @@ public class Lightning : MonoBehaviour
 
     public GameObject lightningEffect;
     [SerializeField] SoundSO thunderSound;
-    ManaPool manaPool;
+    [SerializeField] ManaPoolSO manaPool;
     [SerializeField]
     ShakeSO shake;
 
@@ -16,14 +16,13 @@ public class Lightning : MonoBehaviour
 
     public void Awake()
     {
-        manaPool = FindObjectOfType<ManaPool>();
         subbedStreams = new List<ManaStreamSO>();
     }
 
     void OnEnable()
     {
         if (!manaPool) return;
-        foreach(ManaStreamSO stream in manaPool.manaStreams)
+        foreach(ManaStreamSO stream in manaPool.streams)
         {
             stream.Explode += Strike;
             subbedStreams.Add(stream);
